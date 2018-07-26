@@ -1,19 +1,208 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<style>
-			body {background-color: #001547;}
-			h1 {color: mediumturquoise;}
-			h3 {color: mediumslateblue;}
-			h4 {color: lightskyblue;}
-			/*colors: mediumseagreen , darkolivegreen , seagreen , springgreen, mediumspringgreen , palegreen , lightgreen */
-		</style>
-		<h1> <center> ENVIROMATION </center> </h1>
-		<h4> <font-size: 10 px> <center> Emily Hull <p> Joselle Costa <p> Kali Hamad <p> Valentina Lin </center> </font> </h4> 
-		<h3> An Interactive Map of the Environmental Issues in the World </h3>
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<head>
+  <style>
+      @import compass
 
-	</head>
-	<body>
-	</body>
-</html>
+      $font-stack-safe: Helvetica, sans-serif
+      $font-stack-main: "Roboto", $font-stack-safe
+      $font-stack-highlight: "Roboto Condensed", $font-stack-safe
+
+      $color-background: rgb(26, 26, 26)
+      $color-highlight: rgb(175, 225, 250)
+      $color-highlight-light: lighten($color-highlight, 10%)
+      $color-highlight-dark: darken($color-highlight, 10%)
+
+      $color-foreground: invert($color-background)
+
+      $map-dot-size: 40px
+
+      $transition-time: 0.25s
+
+      html
+        background: $color-background
+        color: $color-foreground
+        text-align: center
+        font-family: $font-stack-main
+
+      body
+        max-width: 1200px
+        margin: 20px auto
+        padding: 0 100px
+        overflow-x: hidden
+
+      .description
+        max-width: 600px
+        margin: 0 auto
+        color: transparentize($color-foreground, 0.3)
+
+      div, img, footer
+        position: relative
+        @include box-sizing(border-box)
+
+      h1, h2, h3, h4, h5, h6
+        margin-bottom: 20px
+        text-transform: uppercase
+        font-family: $font-stack-highlight
+        font-weight: 300
+
+      h1
+        font-size: 36pt
+
+      h2
+        font-size: 24pt
+
+      h3
+        font-size: 18pt
+
+      h4
+        font-size: 16pt
+
+      h5
+        font-size: 14pt
+
+      h6
+        font-size: 12pt
+
+      p
+        font-size: 12pt
+        margin-bottom: 12pt
+
+      strong
+        font-weight: 900
+        font-family: $font-stack-highlight
+        color: $color-foreground
+
+      a
+        @include transition(color $transition-time ease-in-out)
+        font-family: $font-stack-highlight
+        text-transform: uppercase
+        text-decoration: none
+        color: $color-highlight-light
+        &:visited
+          color: $color-highlight-light
+        li.active &,
+        &:hover,
+        &:active
+          color: $color-foreground
+
+      .centered
+        position: absolute
+        top: 50%
+        left: 50%
+        @include translate(-50%, -50%)
+
+      .centered-y
+        position: absolute
+        width: 100%
+        top: 50%
+        @include translateY(-50%)
+
+      .distribution-map
+        position: relative
+        width: 100%
+        padding: 20px
+        @include box-sizing(border-box)
+        margin: 0 auto
+        >img
+          width: 100%
+          position: relative
+          margin: 0
+          padding: 0
+        .map-point
+          cursor: pointer
+          outline: none
+          z-index: 0
+          position: absolute
+          width: $map-dot-size
+          height: $map-dot-size
+          @include border-radius($map-dot-size/2)
+          @include opacity(0.8)
+          @include translate(-50%, -50%)
+          @include transition(opacity $transition-time ease-in-out $transition-time, width $transition-time ease-in-out $transition-time, height $transition-time ease-in-out $transition-time, z-index $transition-time ease-in-out $transition-time)
+          background: transparentize($color-background, 0.15)
+          border: $map-dot-size/8 solid $color-highlight-dark
+          .content
+            @include opacity(0)
+            @include transition(opacity $transition-time ease-in-out)
+            width: 100%
+            height: 100%
+            left: 50%
+            @include translateX(-50%)
+            overflow: overlay
+          &:active, &:focus
+            //Deal with Firefox :active styling
+            margin: 0
+            padding: 0
+            @include opacity(1)
+            width: 300px
+            height: 220px
+            color: $color-foreground
+            z-index: 1
+            @include transition(opacity $transition-time ease-in-out, width $transition-time ease-in-out, height $transition-time ease-in-out)
+            .content
+              @include opacity(1)
+              @include transition(opacity $transition-time ease-in-out $transition-time, height 0 ease-in-out $transition-time, overflow 0 ease-in-out $transition-time)
+              overflow: hidden
+              a:hover, a:active
+                color: $color-highlight
+        </style>
+<head>
+<body>
+      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+      <h1>Pure CSS Interactive Map</h1>
+      <p class="description">This doesn&rsquo;t look great at small sizes &mdash; in the original, I have an alternate rule for displaying on mobile devices. <strong>Click the points to expand them.</strong></p>
+      <div class="distribution-map">
+          <!-- This was broken for a while because image hosts are annoying :( -->
+          <img src="https://i.imgur.com/M7aUkuS.png">
+          <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
+          <button class="map-point" style="top:15%;left:35%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>A Place</h2>
+                      <p>You can put plenty of details in here. In the original, I listed contact information and linked phone numbers and email addresses.</p>
+                  </div>
+              </div>
+          </button>
+          <button class="map-point" style="top:35%;left:50%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>Another Place</h2>
+                      <p>Lorem ipsum something something</p>
+                  </div>
+              </div>
+          </button>
+          <button class="map-point" style="top:76%;left:82.5%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>Marauder Town</h2>
+                      <p>I solemnly swear that I am up to no good</p>
+                  </div>
+              </div>
+          </button>
+          <button class="map-point" style="top:45%;left:16%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>Logan's Mum</h2>
+                      <p>I&rsquo;m a marshmallow</p>
+                  </div>
+              </div>
+          </button>
+          <button class="map-point" style="top:60%;left:53%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>Toto</h2>
+                      <p>I bless the rains</p>
+                  </div>
+              </div>
+          </button>
+          <button class="map-point" style="top:25%;left:70%">
+              <div class="content">
+                  <div class="centered-y">
+                      <h2>With Love</h2>
+                      <p>&mdash; 007</p>
+                  </div>
+              </div>
+          </button>
+      </div>
+      <p class="description">It&rsquo;s been brought to my attention that OSX/Safari doesn&rsquo;t support :active for buttons with default settings, so you guys will have to resort to JS or hold down your mouse button to keep :focus triggered.</p>
+</body>
