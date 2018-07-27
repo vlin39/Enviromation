@@ -198,6 +198,7 @@
   }
   </script>
 
+
 </head>
 <body>
 
@@ -212,12 +213,9 @@
 
       <script type = "text/javascript" src = "puppy.json" ></script>
       <script>
-
-      var s = '{"Group":"emily, joselle, kali, valentina"}';
-      var obj = JSON.parse(s);
-      document.getElementById("puppy")=obj.Group;
-
-
+          var s = '{"Group":"emily, joselle, kali, valentina"}';
+          var obj = JSON.parse(s);
+          document.getElementById("puppy")=obj.Group;
       </script>
 
       <div id="home" class="tabcontent">
@@ -343,9 +341,15 @@
       </div>
       <div id="news" class="tabcontent">
         <p>News From Gef Twitter</p>
-        <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by theGEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by GEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div id="about" class="tabcontent">
-        <p>TESTING THE ABOUT PAGE</p>
+        <div>
+            <h1>About This Website</h1>
+        </div>
+        <div>
+          <h1>About The Creators</h2>
+
+        </div>
       </div>
 </body>
