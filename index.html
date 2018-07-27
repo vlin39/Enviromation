@@ -28,7 +28,7 @@
           font-weight: 300;
       }
       h1 {
-          font-size: 36pt;
+          font-size: 48pt;
       }
       h2 {
           font-size: 24pt;
@@ -150,168 +150,179 @@
           color: #afe1fa;
           }
           /* Popup container - can be anything you want */
-          .popup {
-              position: relative;
-              display: inline-block;
-              cursor: pointer;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-          }
+          body {
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+            }
 
-          /* The actual popup */
-          .popup .popuptext {
-              visibility: hidden;
-              width: 160px;
-              background-color: #555;
-              color: #fff;
+            .topnav {
+              overflow: hidden;
+              background-color: #333;
+            }
+
+            .topnav a {
+              float: left;
+              color: #f2f2f2;
               text-align: center;
-              border-radius: 6px;
-              padding: 8px 0;
-              position: absolute;
-              z-index: 1;
-              bottom: 125%;
-              left: 50%;
-              margin-left: -80px;
-          }
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            }
 
-          /* Popup arrow */
-          .popup .popuptext::after {
-              content: "";
-              position: absolute;
-              top: 100%;
-              left: 50%;
-              margin-left: -5px;
-              border-width: 5px;
-              border-style: solid;
-              border-color: #555 transparent transparent transparent;
-          }
+            .topnav a:hover {
+              background-color: #ddd;
+              color: black;
+            }
 
-          /* Toggle this class - hide and show the popup */
-          .popup .show {
-              visibility: visible;
-              -webkit-animation: fadeIn 1s;
-              animation: fadeIn 1s;
-          }
+            .topnav a.active {
+              background-color: #4CAF50;
+              color: white;
+            }
+            #help{display:none}
+            #news{display:none}
+            #about{display:none}
   </style>
   <script>
-  // When the user clicks on div, open the popup
-  function apopup() {
-      var popup = document.getElementById("myPopupa");
-      popup.classList.toggle("show");
-  }
-  function bpopup() {
-      var popup = document.getElementById("myPopupb");
-      popup.classList.toggle("show");
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
   }
 
 
   </script>
+
 </head>
 <body>
 
+          <div class="topnav">
+            <a class="tablinks" onclick="openCity(event, 'home')">Home</a>
+            <a class="tablinks" onclick="openCity(event, 'help')">Get Involved</a>
+            <a class="tablinks" onclick="openCity(event, 'news')">News</a>
+            <a class="tablinks" onclick="openCity(event, 'about')">About</a>
+          </div>
 
-<!--      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
-      <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 
 
-      <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
-<!--      <p class="description">This doesn&rsquo;t look great at small sizes &mdash; in the original, I have an alternate rule for displaying on mobile devices. <strong>Click the points to expand them.</strong></p> -->
-      <p class="description"><strong>Click the points to expand them!</strong></p>
-      <div class="distribution-map">
-          <!-- This was broken for a while because image hosts are annoying :( -->
-          <!-- <img src="https://i.imgur.com/M7aUkuS.png"> -->
+      <script type = "text/javascript" src = "puppy.json" ></script>
+      <script>
 
-          <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
+      var s = '{"Group":"emily, joselle, kali, valentina"}';
+      var obj = JSON.parse(s);
+      document.getElementById("puppy")=obj.Group;
 
-          <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
-          <button class="map-point" style="top:8%;left:48.5%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Melting Ice Caps</h2>
-                      <p>TEXTME</p>
+
+      </script>
+
+      <div id="home" class="tabcontent">
+          <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
+          <p class="description"><strong>Click the points to expand them!</strong></p>
+          <div class="distribution-map">
+              <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
+              <button class="map-point" style="top:8%;left:48.5%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Melting Ice Caps</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:48%;left:49%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Waste Disposal and Management</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:48%;left:49%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Waste Disposal and Management</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:79%;left:83%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Invasive Species</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:79%;left:83%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Invasive Species</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:70%;left:12%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Plastic</h2>
-                      <p>TEXTME</p>  <!--I&rsquo;m a marshmallow-->
+              </button>
+              <button class="map-point" style="top:70%;left:12%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Plastic</h2>
+                          <p>TEXTME</p>  <!--I&rsquo;m a marshmallow-->
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:50%;left:21%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Agricultural Pollution</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:50%;left:21%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Agricultural Pollution</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:75%;left:32%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Deforestation</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:75%;left:32%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Deforestation</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:57%;left:36%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Desalination</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:57%;left:36%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Desalination</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:63%;left:52%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Illegal Poaching</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:63%;left:52%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Illegal Poaching</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:38%;left:63%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Nuclear Waste</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:38%;left:63%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Nuclear Waste</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:60%;left:68.5%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Overpopulation</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:60%;left:68.5%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Overpopulation</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
-              </div>
-          </button>
-          <button class="map-point" style="top:56%;left:75%">
-              <div class="content">
-                  <div class="centered-y">
-                      <h2>Air Pollution</h2>
-                      <p>TEXTME</p>
+              </button>
+              <button class="map-point" style="top:56%;left:75%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Air Pollution</h2>
+                          <p>TEXTME</p>
+                      </div>
                   </div>
+
+              </button>
+              <button class="map-point" style="top:52%;left:84.5%">
+                  <div class="content">
+                      <div class="centered-y">
+                          <h2>Overfishing</h2>
+                          <p>TEXTME</p>
+                      </div>
+
               </div>
           </button>
           <button class="map-point" style="top:52%;left:84.5%">
@@ -319,17 +330,25 @@
                   <div class="centered-y">
                       <h2>Overfishing</h2>
                       <p id="puppy"></p>
-                      
+
                   </div>
-              </div>
-          </button>
-      <div class="popup" onclick="apopup()">Click me to learn more about this website!
-        <span class="popuptext" id="myPopupa">Info about this website!</span>
+              </button>
+            </div>
+            <p> </p>
+            <p class="description">Information provided by Wikipedia.</p>
+            <p> </p>
+            <p> </p>
+        </div>
+
+      <div id="help" class="tabcontent">
+        <p>TESTING THE HELP PAGE</p>
       </div>
-      <br/>
-      <br/>
-      <div class="popup" onclick="bpopup()">Click me to learn more about the website creators!
-        <span class="popuptext" id="myPopupb">Info about us!</span>
+      <div id="news" class="tabcontent">
+        <p>News From Gef Twitter</p>
+        <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by theGEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div id="about" class="tabcontent">
+        <p>TESTING THE ABOUT PAGE</p>
       </div>
       <br/>
       <br/>
