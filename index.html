@@ -205,23 +205,12 @@
       var popup = document.getElementById("myPopupb");
       popup.classList.toggle("show");
   }
+
+
   </script>
 </head>
 <body>
 
-
-  <script type = "text/javascript" src = "puppy.json" ></script>
-  <script>
-  // var json = $.getJSON("puppy.json");
-  // $.getJSON("puppy.json", function(json) {
-  //     document.getElementById("puppy") = json.extract; // this will show the info it in firebug console
-  // });
-  var s = '{"Group":"emily, joselle, kali, valentina"}';
-  var obj = JSON.parse(s);
-  document.getElementById("puppy")=obj.Group;
-//var obj = JSON.parse("puppy.json")
-
-  </script>
 
 <!--      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
       <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
@@ -330,7 +319,7 @@
                   <div class="centered-y">
                       <h2>Overfishing</h2>
                       <p id="puppy"></p>
-                      <p> helloo </p>
+                      
                   </div>
               </div>
           </button>
@@ -345,4 +334,20 @@
       <br/>
       <br/>
       <p class="description">Information provided by Wikipedia.</p>
+
+
+    <script>
+
+    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+
+    var whalingRequest = new XMLHttpRequest();
+    whalingRequest.open('GET', query, false);
+
+    whalingRequest.send();
+
+    var whalingInformation = JSON.parse(whalingRequest.responseText);
+    var body = whalingInformation['parse']['text']['*'];
+    document.getElementById("puppy").innerHTML = body;
+
+    </script>
 </body>
