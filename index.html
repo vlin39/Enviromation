@@ -210,10 +210,15 @@
 <body>
 
 
-  <script type = "text/javascript" src = "puppy.json" >
-  $.getJSON("puppy.json", function(JSON){
-    document.getElementById("puppy").innerHTML = obj.extract;
-  });
+  <script type = "text/javascript" src = "puppy.json" ></script>
+  <script>
+  // var json = $.getJSON("puppy.json");
+  // $.getJSON("puppy.json", function(json) {
+  //     document.getElementById("puppy") = json.extract; // this will show the info it in firebug console
+  // });
+  var s = '{"Group":"emily, joselle, kali, valentina"}';
+  var obj = JSON.parse(s);
+  document.getElementById("puppy")=obj.Group;
 //var obj = JSON.parse("puppy.json")
 
   </script>
@@ -324,7 +329,7 @@
               <div class="content">
                   <div class="centered-y">
                       <h2>Overfishing</h2>
-                      <p id="puppy">Hello</p>
+                      <p id="puppy"></p>
                       <p> helloo </p>
                   </div>
               </div>
