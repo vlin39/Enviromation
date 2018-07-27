@@ -4,7 +4,7 @@
           background: #001932;
           color: #e5e5e5;
           text-align: center;
-          font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+          font-family: "Roboto", Helvetica, sans-serif;
         }
         body {
           max-width: 1200px;
@@ -24,7 +24,7 @@
       h1, h2, h3, h4, h5, h6 {
           margin-bottom: 20px;
           text-transform: uppercase;
-          font-family: Impact, "Lucida Grande", sans-serif;
+          font-family: "Roboto Condensed", Helvetica, sans-serif;
           font-weight: 300;
       }
       h1 {
@@ -48,16 +48,15 @@
           p {
           font-size: 12pt;
           margin-bottom: 12pt;
-          font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
           }
           strong {
           font-weight: 900;
-          font-family: font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;;
+          font-family: "Roboto Condensed", Helvetica, sans-serif;
           color: #e5e5e5;
           }
           a {
           transition: color 0.25s ease-in-out;
-          font-family: font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;;
+          font-family: "Roboto Condensed", Helvetica, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           color: #dff3fd;
@@ -179,6 +178,9 @@
               background-color: #4CAF50;
               color: white;
             }
+            #help{display:none}
+            #news{display:none}
+            #about{display:none}
   </style>
   <script>
   function openCity(evt, cityName) {
@@ -199,41 +201,30 @@
 </head>
 <body>
 
-      <div class="topnav">
-        <a class="tablinks" onclick="openCity(event, 'home')">Home</a>
-        <a class="tablinks" onclick="openCity(event, 'help')">Get Involved</a>
-        <a class="tablinks" onclick="openCity(event, 'news')">News</a>
-        <a class="tablinks" onclick="openCity(event, 'about')">About</a>
-      </div>
+          <div class="topnav">
+            <a class="tablinks" onclick="openCity(event, 'home')">Home</a>
+            <a class="tablinks" onclick="openCity(event, 'help')">Get Involved</a>
+            <a class="tablinks" onclick="openCity(event, 'news')">News</a>
+            <a class="tablinks" onclick="openCity(event, 'about')">About</a>
+          </div>
 
 
 
-  <script type = "text/javascript" src = "puppy.json" ></script>
-  <script>
-  // var json = $.getJSON("puppy.json");
-  // $.getJSON("puppy.json", function(json) {
-  //     document.getElementById("puppy") = json.extract; // this will show the info it in firebug console
-  // });
-  var s = '{"Group":"emily, joselle, kali, valentina"}';
-  var obj = JSON.parse(s);
-  document.getElementById("puppy")=obj.Group;
-//var obj = JSON.parse("puppy.json")
+      <script type = "text/javascript" src = "puppy.json" ></script>
+      <script>
 
-  </script>
+      var s = '{"Group":"emily, joselle, kali, valentina"}';
+      var obj = JSON.parse(s);
+      document.getElementById("puppy")=obj.Group;
 
-<!--      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
-      <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
+
+      </script>
+
       <div id="home" class="tabcontent">
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
-    <!--      <p class="description">This doesn&rsquo;t look great at small sizes &mdash; in the original, I have an alternate rule for displaying on mobile devices. <strong>Click the points to expand them.</strong></p> -->
           <p class="description"><strong>Click the points to expand them!</strong></p>
           <div class="distribution-map">
-              <!-- This was broken for a while because image hosts are annoying :( -->
-              <!-- <img src="https://i.imgur.com/M7aUkuS.png"> -->
-
               <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-
-              <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
               <button class="map-point" style="top:8%;left:48.5%">
                   <div class="content">
                       <div class="centered-y">
@@ -348,7 +339,7 @@
         <p>TESTING THE HELP PAGE</p>
       </div>
       <div id="news" class="tabcontent">
-        <p>News From</p>
+        <p>News From Gef Twitter</p>
         <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by theGEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div id="about" class="tabcontent">
