@@ -1,529 +1,265 @@
 <head>
-
   <style>
-
         html {
-
           background: #001932;
-
           color: #e5e5e5;
-
           text-align: center;
-
           font-family: "Roboto", Helvetica, sans-serif;
-
         }
-
         body {
-
           max-width: 1200px;
-
           margin: 20px auto;
-
           padding: 0 100px;
-
           overflow-x: hidden;
-
         }
-
       .description {
-
           max-width: 600px;
-
           margin: 0 auto;
-
           color: rgba(229, 229, 229, 0.7);
-
         }
-
       div, img, footer {
-
           position: relative;
-
           box-sizing: border-box;
-
         }
-
       h1, h2, h3, h4, h5, h6 {
-
           margin-bottom: 20px;
-
           text-transform: uppercase;
-
           font-family: "Roboto Condensed", Helvetica, sans-serif;
-
           font-weight: 300;
-
       }
-
       h1 {
-
           font-size: 36pt;
-
       }
-
       h2 {
-
           font-size: 24pt;
-
         }
-
       h3 {
-
           font-size: 18pt;
-
           }
-
           h4 {
-
           font-size: 16pt;
-
           }
-
           h5 {
-
           font-size: 14pt;
-
           }
-
           h6 {
-
           font-size: 12pt;
-
           }
-
           p {
-
           font-size: 12pt;
-
           margin-bottom: 12pt;
-
           }
-
           strong {
-
           font-weight: 900;
-
           font-family: "Roboto Condensed", Helvetica, sans-serif;
-
           color: #e5e5e5;
-
           }
-
           a {
-
           transition: color 0.25s ease-in-out;
-
           font-family: "Roboto Condensed", Helvetica, sans-serif;
-
           text-transform: uppercase;
-
           text-decoration: none;
-
           color: #dff3fd;
-
           }
-
           a:visited {
-
           color: #dff3fd;
-
           }
-
           li.active a, a:hover, a:active {
-
           color: #e5e5e5;
-
           }
-
           .centered {
-
           position: absolute;
-
           top: 50%;
-
           left: 50%;
-
           -webkit-transform: translate(-50%, -50%);
-
           transform: translate(-50%, -50%);
-
           }
-
           .centered-y {
-
           position: absolute;
-
           width: 100%;
-
           top: 50%;
-
           -webkit-transform: translateY(-50%);
-
           transform: translateY(-50%);
-
           }
-
           .distribution-map {
-
           position: relative;
-
           width: 100%;
-
           padding: 20px;
-
           box-sizing: border-box;
-
           margin: 0 auto;
-
           }
-
           .distribution-map > img {
-
           width: 100%;
-
           position: relative;
-
           margin: 0;
-
           padding: 0;
-
           }
-
           .distribution-map .map-point {
-
           cursor: pointer;
-
           outline: none;
-
           z-index: 0;
-
           position: absolute;
-
           width: 40px;
-
           height: 40px;
-
           border-radius: 20px;
-
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-
           opacity: 0.8;
-
           -webkit-transform: translate(-50%, -50%);
-
           transform: translate(-50%, -50%);
-
           -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-
           -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-
           -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
-
           -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
-
           transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
-
           background: rgba(26, 26, 26, 0.85);
-
           border: 5px solid #7fcff7;
-
           }
-
           .distribution-map .map-point .content {
-
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-
           opacity: 0;
-
           transition: opacity 0.25s ease-in-out;
-
           width: 100%;
-
           height: 100%;
-
           left: 50%;
-
           -webkit-transform: translateX(-50%);
-
           transform: translateX(-50%);
-
           overflow: overlay;
-
           }
-
           .distribution-map .map-point:active, .distribution-map .map-point:focus {
-
           margin: 0;
-
           padding: 0;
-
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-
           opacity: 1;
-
           width: 300px;
-
           height: 220px;
-
           color: #e5e5e5;
-
           z-index: 1;
-
           transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-
           }
-
           .distribution-map .map-point:active .content, .distribution-map .map-point:focus .content {
-
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-
           opacity: 1;
-
           -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -webkit-transition-delay: 0.25s, 0s, 0s;
-
           transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           overflow: hidden;
-
           }
-
           .distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
-
           color: #afe1fa;
-
           }
-
   </style>
-
 </head>
-
 <body>
 
-
-
 <!--      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
-
       <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 
 
-
-
-
       <h1> <center> <font face = "impact, bookman, helvetica" color = aquamarine font-size = 500 px> ENVIROMATION </font> </center> </h1>
-
 <!--      <p class="description">This doesn&rsquo;t look great at small sizes &mdash; in the original, I have an alternate rule for displaying on mobile devices. <strong>Click the points to expand them.</strong></p> -->
-
       <p class="description"><strong>Click the points to expand them!</strong></p>
-
       <div class="distribution-map">
-
           <!-- This was broken for a while because image hosts are annoying :( -->
-
           <img src="https://i.imgur.com/M7aUkuS.png">
-
           <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
-
           <button class="map-point" style="top:10%;left:46%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Arctic Melting Ice Caps</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Melting Ice Caps</h2>
+                      <p>Polar bears.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:35%;left:50%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Europe</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Waste Disposal and Management</h2>
+                      <p>Naples Waste Management Issue</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:76%;left:82.5%">
-
               <div class="content">
-
                   <div class="centered-y">
-
                       <h2>Invasive Species</h2>
-
-                      <p>TEXTME.</p>
-
+                      <p>Currently mainly in Australia. Seriously, bunnies?</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:60%;left:10%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Plastic in Pacific</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Plastic</h2>
+                      <p>Great Pacific Garbage Patch</p>  <!--I&rsquo;m a marshmallow-->
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:40%;left:20%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>North America</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Agricultural Pollution</h2>
+                      <p>Impact of pesticides on environment in North America.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:72%;left:31.5%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>South America</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Deforestation</h2>
+                      <p>South America, mainly in terms of the Amazon rainforest in Brazil.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:50%;left:35%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Other Ocean thingy</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Desalination</h2>
+                      <p>So... this is in the Atlantic, so please do not focus on Austrailia.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:58%;left:53%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Illegal Poaching in Africa</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Illegal Poaching</h2>
+                      <p>In Africa. Lions, giraffes, elephants, ivory trade, rhinoceros horn, etc.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:25%;left:63%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Nuclear</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Nuclear Waste</h2>
+                      <p>And impacts of radiation on the envionment. Look at Chernobyl.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:50%;left:68%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Overpopulation in Japan</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Overpopulation</h2>
+                      <p>In India. </p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:45%;left:75%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Pollution in China</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Air Pollution</h2>
+                      <p>Focus on China.</p>
                   </div>
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:42%;left:85%">
-
               <div class="content">
-
                   <div class="centered-y">
-
-                      <h2>Overfishing in Japan</h2>
-
-                      <p>TEXTME</p>
-
+                      <h2>Overfishing</h2>
+                      <p>In Japan. Maybe include something having to do with bluefin tuna and other endangered species.</p>
                   </div>
-
               </div>
-
           </button>
-
       </div>
-
-      <p class="description">It&rsquo;s been brought to my attention that OSX/Safari doesn&rsquo;t support :active for buttons with default settings, so you guys will have to resort to JS or hold down your mouse button to keep :focus triggered.</p>
-
+      <p class="description">Created by Emily, Joselle, Kali, and Valentina during the 2018 GirlsWhoCode Summer Program at AT&T Los Angeles.</p>
 </body>
