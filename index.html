@@ -153,6 +153,15 @@
 </head>
 <body>
 
+
+  <script type = "text/javascript" src = "puppy.json" >
+  $.getJSON("puppy.json", function(JSON){
+    document.getElementById("puppy").innerHTML = obj.extract;
+  });
+//var obj = JSON.parse("puppy.json")
+
+  </script>
+
 <!--      <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
       <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 
@@ -163,9 +172,9 @@
       <div class="distribution-map">
           <!-- This was broken for a while because image hosts are annoying :( -->
           <!-- <img src="https://i.imgur.com/M7aUkuS.png"> -->
-        
+
           <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-          
+
           <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
           <button class="map-point" style="top:8%;left:49%">
               <div class="content">
@@ -179,7 +188,7 @@
               <div class="content">
                   <div class="centered-y">
                       <h2>Waste Disposal and Management</h2>
-                      <p>TEXTME</p> 
+                      <p>TEXTME</p>
                   </div>
               </div>
           </button>
@@ -259,7 +268,8 @@
               <div class="content">
                   <div class="centered-y">
                       <h2>Overfishing</h2>
-                      <p>TEXTME</p>
+                      <p id="puppy">Hello</p>
+                      <p> helloo </p>
                   </div>
               </div>
           </button>
