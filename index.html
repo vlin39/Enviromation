@@ -149,7 +149,63 @@
           .distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
           color: #afe1fa;
           }
+          /* Popup container - can be anything you want */
+          .popup {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+          }
+
+          /* The actual popup */
+          .popup .popuptext {
+              visibility: hidden;
+              width: 160px;
+              background-color: #555;
+              color: #fff;
+              text-align: center;
+              border-radius: 6px;
+              padding: 8px 0;
+              position: absolute;
+              z-index: 1;
+              bottom: 125%;
+              left: 50%;
+              margin-left: -80px;
+          }
+
+          /* Popup arrow */
+          .popup .popuptext::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: #555 transparent transparent transparent;
+          }
+
+          /* Toggle this class - hide and show the popup */
+          .popup .show {
+              visibility: visible;
+              -webkit-animation: fadeIn 1s;
+              animation: fadeIn 1s;
+          }
   </style>
+  <script>
+  // When the user clicks on div, open the popup
+  function apopup() {
+      var popup = document.getElementById("myPopupa");
+      popup.classList.toggle("show");
+  }
+  function bpopup() {
+      var popup = document.getElementById("myPopupb");
+      popup.classList.toggle("show");
+  }
+  </script>
 </head>
 <body>
 
@@ -163,9 +219,9 @@
       <div class="distribution-map">
           <!-- This was broken for a while because image hosts are annoying :( -->
           <!-- <img src="https://i.imgur.com/M7aUkuS.png"> -->
-        
+
           <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-          
+
           <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
           <button class="map-point" style="top:8%;left:49%">
               <div class="content">
@@ -263,6 +319,15 @@
                   </div>
               </div>
           </button>
+      <div class="popup" onclick="apopup()">Click me to learn more about this website!
+        <span class="popuptext" id="myPopupa">Info about this website!</span>
       </div>
-      <p class="description">Created by Emily, Joselle, Kali, and Valentina during the 2018 GirlsWhoCode Summer Program at AT&T Los Angeles.</p>
+      <br/>
+      <br/>
+      <div class="popup" onclick="bpopup()">Click me to learn more about the website creators!
+        <span class="popuptext" id="myPopupb">Info about us!</span>
+      </div>
+      <br/>
+      <br/>
+      <p class="description">Information provided by Wikipedia.</p>
 </body>
