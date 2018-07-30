@@ -163,483 +163,239 @@
             background-color: #4CAF50;
             color: white;
           }
-
-            #help{display:none}
-
-            #news{display:none}
-
-            #about{display:none}
+          #help{display:none}
+          #news{display:none}
+          #about{display:none}
 
   </style>
 
   <script>
 
   function openCity(evt, cityName) {
-
       var i, tabcontent, tablinks;
-
       tabcontent = document.getElementsByClassName("tabcontent");
-
       for (i = 0; i < tabcontent.length; i++) {
-
           tabcontent[i].style.display = "none";
-
       }
-
       tablinks = document.getElementsByClassName("tablinks");
-
       for (i = 0; i < tablinks.length; i++) {
-
           tablinks[i].className = tablinks[i].className.replace(" active", "");
-
       }
-
       document.getElementById(cityName).style.display = "block";
-
       evt.currentTarget.className += " active";
-
   }
-
-
-
-
 
   </script>
 
 
-
-
-
 </head>
 
+
 <body>
-
-
-
           <div class="topnav">
-
             <a class="tablinks" onclick="openCity(event, 'home')">Home</a>
-
             <a class="tablinks" onclick="openCity(event, 'help')">Get Involved</a>
-
             <a class="tablinks" onclick="openCity(event, 'news')">News</a>
-
             <a class="tablinks" onclick="openCity(event, 'about')">About</a>
-
           </div>
 
-
-
-
-
-
-
       <script type = "text/javascript" src = "puppy.json" ></script>
-
       <script>
-
           var s = '{"Group":"emily, joselle, kali, valentina"}';
-
           var obj = JSON.parse(s);
-
           document.getElementById("puppy")=obj.Group;
-
       </script>
 
-
-
       <div id="home" class="tabcontent">
-
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
-
           <p class="description"><strong>Click the points to expand them!</strong></p>
-
           <div class="distribution-map">
-
               <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-
               <button class="map-point" style="top:8%;left:48.5%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Melting Ice Caps</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:48%;left:49%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Waste Disposal and Management</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:79%;left:83%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Invasive Species</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:70%;left:12%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Plastic</h2>
-
                           <p>TEXTME</p>  <!--I&rsquo;m a marshmallow-->
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:50%;left:21%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Agricultural Pollution</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:75%;left:32%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Deforestation</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:57%;left:36%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Desalination</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:63%;left:52%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Illegal Poaching</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:38%;left:63%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Nuclear Waste</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:60%;left:68.5%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Overpopulation</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
               </button>
-
               <button class="map-point" style="top:56%;left:75%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Air Pollution</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
                   </div>
-
-
-
               </button>
-
               <button class="map-point" style="top:52%;left:84.5%">
-
                   <div class="content">
-
                       <div class="centered-y">
-
                           <h2>Overfishing</h2>
-
                           <p>TEXTME</p>
-
                       </div>
-
-
-
               </div>
-
           </button>
-
           <button class="map-point" style="top:52%;left:84.5%">
-
               <div class="content">
-
                   <div class="centered-y">
-
                       <h2>Overfishing</h2>
-
                       <p id="puppy"></p>
-
-
-
                   </div>
-
               </button>
-
             </div>
-
             <p> </p>
-
             <p class="description">Information provided by Wikipedia.</p>
-
             <p> </p>
-
             <p> </p>
-
         </div>
 
-
-
       <div id="help" class="tabcontent">
-
          <p>
-
           <p> <h3> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues!</h3>
-
             <h5> Melting Ice Caps </h5>
-
               <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43347998-b9dc74f4-91ac-11e8-8b59-fbad1cf2c67d.png" max-width: 320; > </a>
-
               <a href="https://membership.onlineaction.org/site/Donation2?df_id=18588&18588.donation=form1&addl_info=nav-button&conversion_pg=www.edf.org%2Ffight-global-warming" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348156-86204c16-91ad-11e8-8918-ef536dde068c.png" max-width: 320; > </a>
-
               <a href="https://insideclimatenews.org/about/membership" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348121-5c62d7d6-91ad-11e8-915c-70cdc65c655f.png" max-width: 320; > </a>
-
             <h5> Plastic </h5>
-
               <a href="https://www.surfrider.org/support-surfrider" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348344-77cd301a-91ae-11e8-8767-84e7642d84da.png" max-width: 320; > </a>
-
               <a href="https://oceana.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43352880-ea2db0ea-91df-11e8-8e87-c35ae65d69d1.png" max-width: 320; > </a>
-
               <a href="https://5gyres.kindful.com/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348301-4c67c386-91ae-11e8-982b-75402b3d310d.png" max-width: 320; > </a>
-
               <a href="https://www.take3.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348296-4490a59c-91ae-11e8-8c81-70e92825fe3c.png" max-width: 320; > </a>
-
             <h5> Agricultural Pollution </h5>
-
               <a href="https://actionnetwork.org/fundraising/help-us-create-a-just-thriving-food-system?_ga=2.102796096.1983470314.1532721219-1439825251.1532721219" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348090-303d005a-91ad-11e8-80d6-54419ef8bbc0.png" max-width: 320; > </a>
-
             <h5> Deforestation </h5>
-
               <a href="http://www.worldrainforest.org/donate.html" target="_blank"> World Rainforest Fund </a>
-
               <a href="https://adpartners.org/contact-us/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348189-ade6bad2-91ad-11e8-9d43-34ec766f1f58.png" max-width: 320; > </a>
-
             <h5> Desalination </h5>
-
               <a href="https://www.scientificamerican.com/article/the-impacts-of-relying-on-desalination/" target="_blank"> Scientific American: The Impacts of Relying on Desalination </a>
-
             <h5> Waste Disposal and Management </h5>
-
               <a href="https://www.nationalgeographic.com/environment/global-warming/toxic-waste/" target="_blank"> National Geographic: Toxic Waste</a>
-
               <a href="https://helpsavenature.com/industrial-water-pollution" target="_blank"> HelpSaveNature: Causes and Effects of Industrial Water Pollution You Never Noticed </a>
-
               <a href="https://enva.com/chemical-waste-water-streams/" target="_blank"> Enva: The Impact of Chemical Waste on Water Streams </a>
-
             <h5> Illegal Poaching </h5>
-
               <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348428-cf3a120a-91ae-11e8-8422-fd4349f5b151.png"> </a>
-
               <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348454-f795483c-91ae-11e8-8153-94a602c2daa2.png"> </a>
-
               <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348519-43b78ed2-91af-11e8-98dd-4ad490f8130f.png"> </a>
-
               <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348523-4ae35b82-91af-11e8-9f6a-5741823db356.png"> </a>
-
               <a href="http://chengetawildlife.org/donate-to-chengeta-wildlife/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348487-15662e76-91af-11e8-9b8d-8eeef2f3ee06.png"> </a>
-
               <a href="https://www.wild.org/support/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348492-19656686-91af-11e8-8f61-54c6d5ee70aa.png"> </a>
-
             <h5> Nuclear Waste </h5>
-
               <a href="http://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-wastes/radioactive-wastes-myths-and-realities.aspx" target="_blank"> World Nuclear Association: Radioactive Waste - Myths and Realities</a>
-
             <h5> Overpopulation </h5>
-
               <a href="https://yaleglobal.yale.edu/content/world-population-trends-signal-dangers-ahead" target="_blank"> Yale: World Population Trends Signal Dangers Ahead </a>
-
               <a href="https://mahb.stanford.edu/library-item/the-effect-of-overpopulation-on-public-health/" target="_blank"> Stanford: The Effect of Overpopulation on Public Health </a>
-
               <a href="https://mahb.stanford.edu/library-item/the-effect-of-overpopulation-on-public-health/" target="_blank"> SustainabilityForAll: Causes and Consequences OF Overpopulation </a>
-
             <h5> Air Pollution </h5>
-
               <a href="https://act.greenpeace.org/page/8046/donate/1" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43400967-e6227cf2-93c3-11e8-97b9-158046a6b371.png"> </a>
-
               <a href="http://www.greenpeace.org/eastasia/campaigns/air-pollution/" target="_blank"> Greenpeace: What We Do - Reduce Air Pollution </a>
-
             <h5> Overfishing </h5>
-
               <a href="http://overfishing.org/pages/what_can_I_do_to_help.php" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348248-f86a7a8a-91ad-11e8-91d8-98190e982200.png" max-width: 320; > How Can I Help?</a>
-
               <a href="http://overfishing.org/pages/guide_to_good_fish.php" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348248-f86a7a8a-91ad-11e8-91d8-98190e982200.png" max-width: 320; > A Guide To Good Fish Guides </a>
-
             <h5> Invasive species </h5>
-
             <a href="https://www.rrisc.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348266-15d04e92-91ae-11e8-8289-56e0375eca31.png" max-width: 320;> </a>  -->
-
-
-
         </p>
-
       </div>
 
       <div id="news" class="tabcontent">
-
         <p>News From Gef Twitter</p>
-
         <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by GEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
       </div>
 
       <div id="about" class="tabcontent">
-
         <div>
-
             <h1>About This Website</h1>
-
         </div>
-
         <div>
-
           <h1>About The Creators</h2>
 
-
-
         </div>
-
       </div>
 
       <br/>
-
       <br/>
-
       <p class="description">Information provided by Wikipedia.</p>
 
 
-
-
-
     <script>
-
-
-
     var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
-
-
-
     var whalingRequest = new XMLHttpRequest();
-
     whalingRequest.open('GET', query, false);
-
-
-
     whalingRequest.send();
-
-
-
     var whalingInformation = JSON.parse(whalingRequest.responseText);
-
     var body = whalingInformation['parse']['text']['*'];
-
     document.getElementById("puppy").innerHTML = body;
-
-
-
     </script>
 
 </body>
