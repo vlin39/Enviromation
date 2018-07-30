@@ -1,24 +1,20 @@
 <head>
   <style>
-      html {
-          background: #001932;
-          color: #e5e5e5;
+        body {
           text-align: center;
-          font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
-          /*"Roboto", Helvetica, sans-serif;*/
-        }
-
-      body {
+          background-color: #001932 !important;
           max-width: 1200px;
           margin: 20px auto;
           padding: 0 100px;
           overflow-x: hidden;
+          font-family: Impact, "Roboto", Helvetica, sans-serif;
+          color: white;
         }
-
       .description {
-          max-width: 600px;
-          margin: 0 auto;
-          color: rgba(229, 229, 229, 0.7);
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        color: rgba(229, 229, 229, 0.7);
         }
 
       div, img, footer {
@@ -26,15 +22,24 @@
           box-sizing: border-box;
         }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1, h2, h3 {
           margin-bottom: 20px;
           /*text-transform: uppercase;*/
           font-family: Impact, "Roboto Condensed", Helvetica, sans-serif;
           font-weight: 300;
+          color: white;
         }
 
-      h1 {font-size: 48pt;}
-      h2 {font-size: 24pt;}
+      h4, h5, h6 {
+          margin-bottom: 20px;
+          /*text-transform: uppercase;*/
+          font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+          font-weight: 300;
+          color: white;
+          }
+
+      h1 {font-size: 50pt !important;}
+      h2 {font-size: 24pt !important; font-family: Impact !important; color: white !important;}
       h3 {font-size: 18pt;}
       h4 {font-size: 16pt;}
       h5 {font-size: 14pt;}
@@ -43,6 +48,7 @@
         font-size: 12pt;
         margin-bottom: 12pt;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+        color: white;
         }
       strong {
         font-weight: 900;
@@ -116,7 +122,7 @@
         transform: translateX(-50%);
         overflow: overlay;
       }
-      .distribution-map .map-point:active, .distribution-map .map-point:focus {
+      .distribution-map  .distribution-map  {
         margin: 0;
         padding: 0;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -127,7 +133,7 @@
         z-index: 1;
         transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
       }
-      .distribution-map .map-point:active .content, .distribution-map .map-point:focus .content {
+      .distribution-map .content, .distribution-map  .content {
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1;
         -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
@@ -137,14 +143,11 @@
         transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
         overflow: hidden;
       }
-      .distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
+      .distribution-map  .content a:hover, .distribution-map  .content a:active, .distribution-map  .content a:hover, .distribution-map .content a:active {
         color: #afe1fa;
       }
           /* Popup container - can be anything you want */
-          body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-          }
+
           .topnav {
             overflow: hidden;
             background-color: #333;
@@ -157,22 +160,70 @@
             text-decoration: none;
             font-size: 17px;
           }
-          .topnav a:hover {
-            background-color: #ddd;
-            color: black;
+
+        .distribution-map  .distribution-map {
+          margin: 0;
+          padding: 0;
+          filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+          opacity: 1;
+          width: 300px;
+          height: 220px;
+          color: #e5e5e5;
+          z-index: 1;
+          transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
           }
-          .topnav a.active {
-            background-color: #4CAF50;
-            color: white;
+        .distribution-map  .content, .distribution-map .content {
+          filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+          opacity: 1;
+          -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+          -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+          -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+          -webkit-transition-delay: 0.25s, 0s, 0s;
+          transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+          overflow: hidden;
           }
-          #help{display:none}
-          #news{display:none}
-          #about{display:none}
+          .distribution-map  .content a:hover, .distribution-map  .content a:active, .distribution-map  .content a:hover, .distribution-map .content a:active {
+          color: #afe1fa;
+          }
+          /* Popup container - can be anything you want */
+          .map-point:hover{
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+          }
+            .topnav {
+              overflow: hidden;
+              background-color: #333 !important;
+            }
+            .topnav a {
+              float: left;
+              color: #f2f2f2 !important;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            }
+            .topnav a:hover {
+              background-color: #ddd !important;
+              color: black !important;
+            }
+            .topnav a.active {
+              background-color: #4CAF50!important;
+              color: white;
+            }
+            #help{display:none}
+            #news{display:none}
+            #about{display:none}
+            #aboutt{
+              background-color: #6495ED!important;
+            }
+            #geti{
+              text-align: center !important;
+            }
 
   </style>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script>
-
   function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -189,12 +240,12 @@
 
   </script>
 
-
 </head>
-
-
 <body>
-          <div class="topnav">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <div class="topnav">
             <a class="tablinks" onclick="openCity(event, 'home')">HOME</a>
             <a class="tablinks" onclick="openCity(event, 'help')">GET INVOLVED</a>
             <a class="tablinks" onclick="openCity(event, 'news')">NEWS</a>
@@ -209,6 +260,7 @@
       </script>
 
       <div id="home" class="tabcontent">
+          <br>
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
           <p class="description"><strong>Click the points to expand them!</strong></p>
           <div class="distribution-map">
@@ -237,14 +289,26 @@
                       </div>
                   </div>
               </button>
+<<<<<<< HEAD
               <button class="map-point" style="top:70%;left:12%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Plastic</h2>
                           <p id= "plastic"</p>  <!--I&rsquo;m a marshmallow-->
-                      </div>
-                  </div>
+=======
+              <button class="map-point" data-toggle="modal" data-target="#plastic" style="top:70%;left:12%">
               </button>
+                  <div class="modal fade" id="plastic" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                          <h2 class="modal-title">Plastic</h2>
+                        </div>
+                        <div id = "puppy" class="modal-body">TEXTME</div>
+>>>>>>> 7cedf4880e72242608ba6375ce76a91509aa4619
+                      </div>
+                    </div>
+                  </div>
               <button class="map-point" style="top:50%;left:21%">
                   <div class="content">
                       <div class="centered-y">
@@ -261,14 +325,27 @@
                       </div>
                   </div>
               </button>
+<<<<<<< HEAD
               <button class="map-point" style="top:57%;left:36%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Desalination</h2>
                           <p id= "desal"></p>
-                      </div>
-                  </div>
+=======
+              <button class="map-point" data-toggle="modal" data-target="#plastic" style="top:75%;left:32%">
               </button>
+                  <div class="modal fade" id="plastic" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                          <h2 class="modal-title">Deforestation</h2>
+                        </div>
+                        <div id = "brazil" class="modal-body"></div>
+>>>>>>> 7cedf4880e72242608ba6375ce76a91509aa4619
+                      </div>
+                    </div>
+                  </div>
+
               <button class="map-point" style="top:63%;left:52%">
                   <div class="content">
                       <div class="centered-y">
@@ -301,14 +378,7 @@
                       </div>
                   </div>
               </button>
-              <button class="map-point" style="top:52%;left:84.5%">
-                  <div class="content">
-                      <div class="centered-y">
-                          <h2>Overfishing</h2>
-                          <p>TEXTME</p>
-                      </div>
-              </div>
-          </button>
+
           <button class="map-point" style="top:52%;left:84.5%">
               <div class="content">
                   <div class="centered-y">
@@ -322,12 +392,13 @@
             <p> </p>
             <p> </p>
         </div>
-
       <div id="help" class="tabcontent">
-         <p>
-          <p> <h3> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues!</h3>
+        <div id= "geti">
+          <br>
+          <p> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues! </p>
+
             <h2> Melting Ice Caps </h2>
-              <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43347998-b9dc74f4-91ac-11e8-8b59-fbad1cf2c67d.png" style = "width:50%"; > </a>
+              <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43414169-d94c5638-93e6-11e8-9342-e3f348247821.png" style = "width:50%"; > </a>
               <br>
               <br>
               <a href="https://membership.onlineaction.org/site/Donation2?df_id=18588&18588.donation=form1&addl_info=nav-button&conversion_pg=www.edf.org%2Ffight-global-warming" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348156-86204c16-91ad-11e8-8918-ef536dde068c.png" style = "width:33%"; > </a>
@@ -336,17 +407,24 @@
               <a href="https://insideclimatenews.org/about/membership" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348121-5c62d7d6-91ad-11e8-915c-70cdc65c655f.png" style = "width:20%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Plastic </h2>
               <a href="https://www.surfrider.org/support-surfrider" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348344-77cd301a-91ae-11e8-8767-84e7642d84da.png" style = "width:50%"; > </a>
               <br>
+              <br>
               <a href="https://oceana.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43352880-ea2db0ea-91df-11e8-8e87-c35ae65d69d1.png" style = "width:50%"; > </a>
+              <br>
               <br>
               <a href="https://5gyres.kindful.com/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348301-4c67c386-91ae-11e8-982b-75402b3d310d.png" style = "width:25%"; > </a>
               <br>
               <a href="https://www.take3.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348296-4490a59c-91ae-11e8-8c81-70e92825fe3c.png" style = "width:25%"; > </a>
               <br>
+              <br>
+              <br>
             <h2> Agricultural Pollution </h2>
               <a href="https://actionnetwork.org/fundraising/help-us-create-a-just-thriving-food-system?_ga=2.102796096.1983470314.1532721219-1439825251.1532721219" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348090-303d005a-91ad-11e8-80d6-54419ef8bbc0.png" style = "width:30%"; > </a>
+              <br>
+              <br>
               <br>
             <h2> Deforestation </h2>
               <a href="http://www.worldrainforest.org/donate.html" target="_blank"> World Rainforest Fund </a>
@@ -355,8 +433,12 @@
               <a href="https://adpartners.org/contact-us/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43410559-179d2058-93dc-11e8-9663-5b12705599b2.png" style = "width:30%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Desalination </h2>
               <a href="https://www.scientificamerican.com/article/the-impacts-of-relying-on-desalination/" target="_blank"> Scientific American: The Impacts of Relying on Desalination </a>
+              <br>
+              <br>
+              <br>
             <h2> Waste Disposal and Management </h2>
               <a href="https://www.nationalgeographic.com/environment/global-warming/toxic-waste/" target="_blank"> National Geographic: Toxic Waste</a>
               <br>
@@ -365,22 +447,32 @@
               <a href="https://enva.com/chemical-waste-water-streams/" target="_blank"> Enva: The Impact of Chemical Waste on Water Streams </a>
               <br>
               <br>
+              <br>
             <h2> Illegal Poaching </h2>
               <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348428-cf3a120a-91ae-11e8-8422-fd4349f5b151.png" style = "width:30%"; > </a>
               <br>
-              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348454-f795483c-91ae-11e8-8153-94a602c2daa2.png" style = "width:60%"; > </a>
               <br>
-              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348519-43b78ed2-91af-11e8-98dd-4ad490f8130f.png"style = "width:30%"; > </a>
+              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411939-81e5f6e8-93e0-11e8-9e5d-48baf9bf88cd.png" style = "width:60%"; > </a>
               <br>
-              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348523-4ae35b82-91af-11e8-9f6a-5741823db356.png" style = "width:30%"; > </a>
+              <br>
+              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411940-820967a4-93e0-11e8-9a57-39939eb52c8a.png" style = "width:30%"; > </a>
+              <br>
+              <br>
+              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411941-8230184a-93e0-11e8-91b9-c4d9fdada26a.png" style = "width:30%"; > </a>
+              <br>
               <br>
               <a href="http://chengetawildlife.org/donate-to-chengeta-wildlife/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348487-15662e76-91af-11e8-9b8d-8eeef2f3ee06.png" style = "width:30%"; > </a>
+              <br>
               <br>
               <a href="https://www.wild.org/support/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43410689-99d23a04-93dc-11e8-99ad-51a62a5e03ae.png" style = "width:30%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Nuclear Waste </h2>
               <a href="http://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-wastes/radioactive-wastes-myths-and-realities.aspx" target="_blank"> World Nuclear Association: Radioactive Waste - Myths and Realities</a>
+              <br>
+              <br>
+              <br>
             <h2> Overpopulation </h2>
               <br>
               <a href="https://yaleglobal.yale.edu/content/world-population-trends-signal-dangers-ahead" target="_blank"> Yale: World Population Trends Signal Dangers Ahead </a>
@@ -390,10 +482,13 @@
               <a href="https://mahb.stanford.edu/library-item/the-effect-of-overpopulation-on-public-health/" target="_blank"> SustainabilityForAll: Causes and Consequences OF Overpopulation </a>
               <br>
               <br>
+              <br>
             <h2> Air Pollution </h2>
               <a href="https://act.greenpeace.org/page/8046/donate/1" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43400967-e6227cf2-93c3-11e8-97b9-158046a6b371.png" style = "width:50%"; > </a>
               <br>
               <a href="http://www.greenpeace.org/eastasia/campaigns/air-pollution/" target="_blank"> Greenpeace: What We Do - Reduce Air Pollution </a>
+              <br>
+              <br>
               <br>
             <h2> Overfishing </h2>
               <img src="https://user-images.githubusercontent.com/40871976/43348248-f86a7a8a-91ad-11e8-91d8-98190e982200.png" style = "width:40%"; >
@@ -403,33 +498,47 @@
               <a href="http://overfishing.org/pages/guide_to_good_fish.php" target="_blank"> A Guide To Good Fish Guides </a>
               <br>
               <br>
+              <br>
             <h2> Invasive species </h2>
               <a href="https://www.rrisc.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348266-15d04e92-91ae-11e8-8289-56e0375eca31.png" style = "width:25%";> </a>
               <br>
-        </p>
+              <br>
+      </div>
       </div>
 
       <div id="news" class="tabcontent">
-        <p>News From Gef Twitter</p>
+        <br>
+        <p>News From Global Environment Facility Twitter: </p>
         <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by GEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
       <div id="about" class="tabcontent">
-        <div>
-            <h1>About This Website</h1>
-        </div>
-        <div>
-          <h1>About The Creators</h2>
+        <center>
+        <div id="aboutt">
+            <font color=#000000>
+              <br>
+            <h1><b>About This Website</b></h1>
+            <br>
+            <h3>This website was created to help educate people about the enviromental issues facing the world today. We hope by using the map format people will see that humans are having a negative effect around the world. We also hope that people will be encouraged to take action (via the get involved section).</h3>
+          </font>
+
+
+      </center>
+
+          <h1><b>About The Creators</b></h2>
 
         </div>
       </div>
 
-      <br/>
-      <br/>
+      <br>
+      <br>
+
+
 
 
 
     <script>
+<<<<<<< HEAD
     // This would be a function that asks for specific sections of an article
     var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
     var whalingRequest = new XMLHttpRequest();
@@ -529,6 +638,32 @@
     document.getElementById("popu").innerHTML = body;
 
 
+=======
+
+              var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+
+
+
+              var whalingRequest = new XMLHttpRequest();
+
+              whalingRequest.open('GET', query, false);
+
+              whalingRequest.send();
+              var whalingInformation = JSON.parse(whalingRequest.responseText);
+
+              var body = whalingInformation['parse']['text']['*'];
+
+              document.getElementById("puppy").innerHTML = body;
+
+
+            var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+            var whalingRequest = new XMLHttpRequest();
+            whalingRequest.open('GET', query, false);
+            whalingRequest.send();
+            var whalingInformation = JSON.parse(whalingRequest.responseText);
+            var body = whalingInformation['parse']['text']['*'];
+            document.getElementById("puppy").innerHTML = body;
+>>>>>>> 7cedf4880e72242608ba6375ce76a91509aa4619
     </script>
 
 </body>
