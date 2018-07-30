@@ -1,22 +1,14 @@
 <head>
   <style>
-
-
         body {
           background-color: #001932 !important;
           max-width: 1200px;
           margin: 20px auto;
           padding: 0 100px;
           overflow-x: hidden;
-
-          font-family: "Roboto", Helvetica, sans-serif;
-
+          font-family: Impact, "Roboto", Helvetica, sans-serif;
         }
-
-
-
       .description {
-
         text-align: center;
         max-width: 600px;
         margin: 0 auto;
@@ -158,123 +150,65 @@
           }
 
           .distribution-map  .distribution-map {
-
           margin: 0;
-
           padding: 0;
-
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-
           opacity: 1;
-
           width: 300px;
-
           height: 220px;
-
           color: #e5e5e5;
-
           z-index: 1;
-
           transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-
           }
-
           .distribution-map  .content, .distribution-map .content {
-
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-
           opacity: 1;
-
           -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           -webkit-transition-delay: 0.25s, 0s, 0s;
-
           transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
-
           overflow: hidden;
-
           }
-
           .distribution-map  .content a:hover, .distribution-map  .content a:active, .distribution-map  .content a:hover, .distribution-map .content a:active {
-
           color: #afe1fa;
-
           }
-
           /* Popup container - can be anything you want */
           .map-point:hover{
             width: 50px;
-
             height: 50px;
-
             border-radius: 20px;
           }
-
-
             .topnav {
-
               overflow: hidden;
-
               background-color: #333 !important;
-
             }
-
-
-
             .topnav a {
-
               float: left;
-
               color: #f2f2f2 !important;
-
               text-align: center;
-
               padding: 14px 16px;
-
               text-decoration: none;
-
               font-size: 17px;
-
             }
-
-
-
             .topnav a:hover {
-
               background-color: #ddd !important;
-
               color: black !important;
-
             }
-
-
-
             .topnav a.active {
-
               background-color: #4CAF50;
-
               color: white;
-
             }
-
             #help{display:none}
-
             #news{display:none}
-
             #about{display:none}
             #aboutt{
               background-color: #6495ED!important;
             }
 
-
   </style>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script>
-
   function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -291,25 +225,16 @@
 
   </script>
 
-
 </head>
-
 <body>
-
-
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <div class="topnav">
-
-            <a class="tablinks" onclick="openCity(event, 'home')">Home</a>
-
-            <a class="tablinks" onclick="openCity(event, 'help')">Get Involved</a>
-
-            <a class="tablinks" onclick="openCity(event, 'news')">News</a>
-
-            <a class="tablinks" onclick="openCity(event, 'about')">About</a>
-
+            <a class="tablinks" onclick="openCity(event, 'home')">HOME</a>
+            <a class="tablinks" onclick="openCity(event, 'help')">GET INVOLVED</a>
+            <a class="tablinks" onclick="openCity(event, 'news')">NEWS</a>
+            <a class="tablinks" onclick="openCity(event, 'about')">ABOUT</a>
           </div>
 
       <script type = "text/javascript" src = "puppy.json" ></script>
@@ -333,8 +258,6 @@
                   </div>
               </button>
               <button class="map-point" style="top:48%;left:49%">
-
-
                   <div class="content">
                       <div class="centered-y">
                           <h2>Waste Disposal and Management</h2>
@@ -350,15 +273,12 @@
                       </div>
                   </div>
               </button>
-
               <button class="map-point" data-toggle="modal" data-target="#plastic" style="top:70%;left:12%">
               </button>
-
                   <div class="modal fade" id="plastic" tabindex="-1" role="dialog">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-
                           <h2class="modal-title">Plastic</h2>
                           <!-- <button type="button" class="close" data-dissmiss="modal" aria-label="close"> -->
                             <!-- <span aria-hidden="true">&times;</span>
@@ -368,9 +288,6 @@
                       </div>
                     </div>
                   </div>
-
-
-
               <button class="map-point" style="top:70%;left:12%">
                   <div class="content">
                       <div class="centered-y">
@@ -449,7 +366,6 @@
             <p> </p>
             <p> </p>
         </div>
-
       <div id="help" class="tabcontent">
          <p>
           <p> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues! </p>
@@ -496,11 +412,11 @@
             <h2> Illegal Poaching </h2>
               <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348428-cf3a120a-91ae-11e8-8422-fd4349f5b151.png" style = "width:30%"; > </a>
               <br>
-              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348454-f795483c-91ae-11e8-8153-94a602c2daa2.png" style = "width:60%"; > </a>
+              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411939-81e5f6e8-93e0-11e8-9e5d-48baf9bf88cd.png" style = "width:60%"; > </a>
               <br>
-              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348519-43b78ed2-91af-11e8-98dd-4ad490f8130f.png"style = "width:30%"; > </a>
+              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411940-820967a4-93e0-11e8-9a57-39939eb52c8a.png" style = "width:30%"; > </a>
               <br>
-              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348523-4ae35b82-91af-11e8-9f6a-5741823db356.png" style = "width:30%"; > </a>
+              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411941-8230184a-93e0-11e8-91b9-c4d9fdada26a.png" style = "width:30%"; > </a>
               <br>
               <a href="http://chengetawildlife.org/donate-to-chengeta-wildlife/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348487-15662e76-91af-11e8-9b8d-8eeef2f3ee06.png" style = "width:30%"; > </a>
               <br>
