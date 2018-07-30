@@ -113,7 +113,7 @@
         transform: translateX(-50%);
         overflow: overlay;
       }
-      .distribution-map .map-point:active, .distribution-map .map-point:focus {
+      .distribution-map  .distribution-map  {
         margin: 0;
         padding: 0;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -124,7 +124,7 @@
         z-index: 1;
         transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
       }
-      .distribution-map .map-point:active .content, .distribution-map .map-point:focus .content {
+      .distribution-map .content, .distribution-map  .content {
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1;
         -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
@@ -134,7 +134,7 @@
         transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
         overflow: hidden;
       }
-      .distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
+      .distribution-map  .content a:hover, .distribution-map  .content a:active, .distribution-map  .content a:hover, .distribution-map .content a:active {
         color: #afe1fa;
       }
           /* Popup container - can be anything you want */
@@ -285,23 +285,12 @@
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                          <h2class="modal-title">Plastic</h2>
-                          <!-- <button type="button" class="close" data-dissmiss="modal" aria-label="close"> -->
-                            <!-- <span aria-hidden="true">&times;</span>
-                          </button> -->
+                          <h2 class="modal-title">Plastic</h2>
                         </div>
-                          <div  id = "puppy" class="modal-body">TEXTME</div>
+                        <div id = "puppy" class="modal-body">TEXTME</div>
                       </div>
                     </div>
                   </div>
-              <button class="map-point" style="top:70%;left:12%">
-                  <div class="content">
-                      <div class="centered-y">
-                          <h2>Plastic</h2>
-                          <p>TEXTME</p>  <!--I&rsquo;m a marshmallow-->
-                      </div>
-                  </div>
-              </button>
               <button class="map-point" style="top:50%;left:21%">
                   <div class="content">
                       <div class="centered-y">
@@ -508,13 +497,13 @@
               document.getElementById("puppy").innerHTML = body;
 
 
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
-    var whalingRequest = new XMLHttpRequest();
-    whalingRequest.open('GET', query, false);
-    whalingRequest.send();
-    var whalingInformation = JSON.parse(whalingRequest.responseText);
-    var body = whalingInformation['parse']['text']['*'];
-    document.getElementById("puppy").innerHTML = body;
+            var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+            var whalingRequest = new XMLHttpRequest();
+            whalingRequest.open('GET', query, false);
+            whalingRequest.send();
+            var whalingInformation = JSON.parse(whalingRequest.responseText);
+            var body = whalingInformation['parse']['text']['*'];
+            document.getElementById("puppy").innerHTML = body;
     </script>
 
 </body>
