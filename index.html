@@ -1,6 +1,7 @@
 <head>
   <style>
         body {
+          text-align: center;
           background-color: #001932 !important;
           max-width: 1200px;
           margin: 20px auto;
@@ -301,14 +302,19 @@
                       </div>
                   </div>
               </button>
-              <button class="map-point" style="top:57%;left:36%">
-                  <div class="content">
-                      <div class="centered-y">
-                          <h2>Desalination</h2>
-                          <p>TEXTME</p>
-                      </div>
-                  </div>
+              <button class="map-point" data-toggle="modal" data-target="#plastic" style="top:75%;left:32%">
               </button>
+                  <div class="modal fade" id="plastic" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                          <h2 class="modal-title">Deforestation</h2>
+                        </div>
+                        <div id = "brazil" class="modal-body"></div>
+                      </div>
+                    </div>
+                  </div>
+
               <button class="map-point" style="top:63%;left:52%">
                   <div class="content">
                       <div class="centered-y">
