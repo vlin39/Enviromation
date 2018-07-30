@@ -39,7 +39,7 @@
       h4 {font-size: 16pt;}
       h5 {font-size: 14pt;}
       h6 {font-size: 12pt;}
-      
+
       p {
         font-size: 12pt;
         margin-bottom: 12pt;
@@ -165,6 +165,61 @@
           #help{display:none}
           #news{display:none}
           #about{display:none}
+
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          html {
+            box-sizing: border-box;
+          }
+
+          *, *:before, *:after {box-sizing: inherit;}
+
+          .column {
+            float: left;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+          }
+
+          @media screen and (max-width: 650px) {
+            .column {
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          .container {
+            padding: 0 16px;
+          }
+
+          .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+          .title {
+            color: grey;
+          }
+
+          .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+          }
+
+          .button:hover {
+            background-color: #555;
+          }
   </style>
 
   <script>
@@ -404,7 +459,7 @@
       </div>
 
       <div id="news" class="tabcontent">
-        <p>News From Gef Twitter</p>
+        <p>News From Global Environment Facility Twitter:</p>
         <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by GEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
