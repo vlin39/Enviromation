@@ -8,6 +8,7 @@
           padding: 0 100px;
           overflow-x: hidden;
           font-family: Impact, "Roboto", Helvetica, sans-serif;
+          color: white;
         }
       .description {
         text-align: center;
@@ -26,10 +27,11 @@
           /*text-transform: uppercase;*/
           font-family: Impact, "Roboto Condensed", Helvetica, sans-serif;
           font-weight: 300;
+          color: white;
         }
 
       h1 {font-size: 48pt;}
-      h2 {font-size: 24pt;}
+      h2 {font-size: 24pt !important; font-family: Impact !important; color: white !important;}
       h3 {font-size: 18pt;}
       h4 {font-size: 16pt;}
       h5 {font-size: 14pt;}
@@ -38,6 +40,7 @@
         font-size: 12pt;
         margin-bottom: 12pt;
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+        color: white;
         }
       strong {
         font-weight: 900;
@@ -197,7 +200,7 @@
               color: black !important;
             }
             .topnav a.active {
-              background-color: #4CAF50;
+              background-color: #4CAF50!important;
               color: white;
             }
             #help{display:none}
@@ -205,6 +208,9 @@
             #about{display:none}
             #aboutt{
               background-color: #6495ED!important;
+            }
+            #geti{
+              text-align: center !important;
             }
 
   </style>
@@ -362,10 +368,12 @@
             <p> </p>
         </div>
       <div id="help" class="tabcontent">
-         <p>
+        <div id= "geti">
+          <br>
           <p> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues! </p>
+            <br>
             <h2> Melting Ice Caps </h2>
-              <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43347998-b9dc74f4-91ac-11e8-8b59-fbad1cf2c67d.png" style = "width:50%"; > </a>
+              <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43414169-d94c5638-93e6-11e8-9342-e3f348247821.png" style = "width:50%"; > </a>
               <br>
               <br>
               <a href="https://membership.onlineaction.org/site/Donation2?df_id=18588&18588.donation=form1&addl_info=nav-button&conversion_pg=www.edf.org%2Ffight-global-warming" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348156-86204c16-91ad-11e8-8918-ef536dde068c.png" style = "width:33%"; > </a>
@@ -374,8 +382,10 @@
               <a href="https://insideclimatenews.org/about/membership" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348121-5c62d7d6-91ad-11e8-915c-70cdc65c655f.png" style = "width:20%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Plastic </h2>
               <a href="https://www.surfrider.org/support-surfrider" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348344-77cd301a-91ae-11e8-8767-84e7642d84da.png" style = "width:50%"; > </a>
+              <br>
               <br>
               <a href="https://oceana.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43352880-ea2db0ea-91df-11e8-8e87-c35ae65d69d1.png" style = "width:50%"; > </a>
               <br>
@@ -384,8 +394,12 @@
               <br>
               <a href="https://www.take3.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348296-4490a59c-91ae-11e8-8c81-70e92825fe3c.png" style = "width:25%"; > </a>
               <br>
+              <br>
+              <br>
             <h2> Agricultural Pollution </h2>
               <a href="https://actionnetwork.org/fundraising/help-us-create-a-just-thriving-food-system?_ga=2.102796096.1983470314.1532721219-1439825251.1532721219" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348090-303d005a-91ad-11e8-80d6-54419ef8bbc0.png" style = "width:30%"; > </a>
+              <br>
+              <br>
               <br>
             <h2> Deforestation </h2>
               <a href="http://www.worldrainforest.org/donate.html" target="_blank"> World Rainforest Fund </a>
@@ -394,8 +408,12 @@
               <a href="https://adpartners.org/contact-us/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43410559-179d2058-93dc-11e8-9663-5b12705599b2.png" style = "width:30%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Desalination </h2>
               <a href="https://www.scientificamerican.com/article/the-impacts-of-relying-on-desalination/" target="_blank"> Scientific American: The Impacts of Relying on Desalination </a>
+              <br>
+              <br>
+              <br>
             <h2> Waste Disposal and Management </h2>
               <a href="https://www.nationalgeographic.com/environment/global-warming/toxic-waste/" target="_blank"> National Geographic: Toxic Waste</a>
               <br>
@@ -404,22 +422,32 @@
               <a href="https://enva.com/chemical-waste-water-streams/" target="_blank"> Enva: The Impact of Chemical Waste on Water Streams </a>
               <br>
               <br>
+              <br>
             <h2> Illegal Poaching </h2>
               <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348428-cf3a120a-91ae-11e8-8422-fd4349f5b151.png" style = "width:30%"; > </a>
               <br>
+              <br>
               <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411939-81e5f6e8-93e0-11e8-9e5d-48baf9bf88cd.png" style = "width:60%"; > </a>
+              <br>
               <br>
               <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411940-820967a4-93e0-11e8-9a57-39939eb52c8a.png" style = "width:30%"; > </a>
               <br>
+              <br>
               <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411941-8230184a-93e0-11e8-91b9-c4d9fdada26a.png" style = "width:30%"; > </a>
               <br>
+              <br>
               <a href="http://chengetawildlife.org/donate-to-chengeta-wildlife/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348487-15662e76-91af-11e8-9b8d-8eeef2f3ee06.png" style = "width:30%"; > </a>
+              <br>
               <br>
               <a href="https://www.wild.org/support/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43410689-99d23a04-93dc-11e8-99ad-51a62a5e03ae.png" style = "width:30%"; > </a>
               <br>
               <br>
+              <br>
             <h2> Nuclear Waste </h2>
               <a href="http://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-wastes/radioactive-wastes-myths-and-realities.aspx" target="_blank"> World Nuclear Association: Radioactive Waste - Myths and Realities</a>
+              <br>
+              <br>
+              <br>
             <h2> Overpopulation </h2>
               <br>
               <a href="https://yaleglobal.yale.edu/content/world-population-trends-signal-dangers-ahead" target="_blank"> Yale: World Population Trends Signal Dangers Ahead </a>
@@ -429,10 +457,13 @@
               <a href="https://mahb.stanford.edu/library-item/the-effect-of-overpopulation-on-public-health/" target="_blank"> SustainabilityForAll: Causes and Consequences OF Overpopulation </a>
               <br>
               <br>
+              <br>
             <h2> Air Pollution </h2>
               <a href="https://act.greenpeace.org/page/8046/donate/1" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43400967-e6227cf2-93c3-11e8-97b9-158046a6b371.png" style = "width:50%"; > </a>
               <br>
               <a href="http://www.greenpeace.org/eastasia/campaigns/air-pollution/" target="_blank"> Greenpeace: What We Do - Reduce Air Pollution </a>
+              <br>
+              <br>
               <br>
             <h2> Overfishing </h2>
               <img src="https://user-images.githubusercontent.com/40871976/43348248-f86a7a8a-91ad-11e8-91d8-98190e982200.png" style = "width:40%"; >
@@ -442,10 +473,12 @@
               <a href="http://overfishing.org/pages/guide_to_good_fish.php" target="_blank"> A Guide To Good Fish Guides </a>
               <br>
               <br>
+              <br>
             <h2> Invasive species </h2>
               <a href="https://www.rrisc.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348266-15d04e92-91ae-11e8-8289-56e0375eca31.png" style = "width:25%";> </a>
               <br>
-        </p>
+              <br>
+      </div>
       </div>
 
       <div id="news" class="tabcontent">
