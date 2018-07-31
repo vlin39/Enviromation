@@ -1,6 +1,5 @@
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
       body {
@@ -183,8 +182,13 @@
               clear: both;
               display: table;
             }
-            .title {
-              color: grey;
+            .modal-header {
+              background-color: black;
+              color: white;
+            }
+            .modal-body{
+              background-color: white;
+              color: black;
             }
             .button {
               border: none;
@@ -197,10 +201,6 @@
               cursor: pointer;
               width: 100%;
             }
-            .modal-header {
-                background-color: darkblue;
-                color: white;
-                          }
 
             /* .modal{
               color: white;
@@ -258,23 +258,24 @@
               <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
 
 
-              <button class="map-point" role = "button" class = "btn btn-default" data-toggle="modal" data-target="#icec" style="top:4%;left:48.5%"></button>
-              <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-hidden = "true" data-keyboard="true"  data-backdrop="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Melting Ice Caps</h5>
+        <button type="button" class="map-point" data-toggle="modal" data-target="#icec" style="top:4%;left:48.5%">
+        </button>
 
-                    </div>
-                    <div class="modal-body" id="arctic">
-
-                    </div>
-                  </div>
-                </div>
+        <!-- Modal -->
+        <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Melting Ice Caps</h5>
               </div>
+              <div class="modal-body" id="arctic" >
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-              <button class="map-point" style="top:45%;left:49%">
+              <button class="map-point" style="top:48%;left:49%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Waste Disposal and Management</h2>
@@ -284,7 +285,7 @@
               </button>
 
 
-              <button class="map-point" style="top:76%;left:84%">
+              <button class="map-point" style="top:79%;left:83%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Invasive Species</h2>
@@ -294,7 +295,7 @@
               </button>
 
 
-              <button class="map-point" style="top:67%;left:12%">
+              <button class="map-point" style="top:70%;left:12%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Plastic</h2>
@@ -304,7 +305,7 @@
               </button>
 
 
-              <button class="map-point" style="top:49%;left:20%">
+              <button class="map-point" style="top:50%;left:21%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Agricultural Pollution</h2>
@@ -314,7 +315,7 @@
               </button>
 
 
-              <button class="map-point" style="top:72%;left:32%">
+              <button class="map-point" style="top:75%;left:32%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Deforestation</h2>
@@ -324,7 +325,7 @@
               </button>
 
 
-              <button class="map-point" style="top:54%;left:36%">
+              <button class="map-point" style="top:57%;left:36%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Desalination</h2>
@@ -334,7 +335,7 @@
               </button>
 
 
-              <button class="map-point" style="top:60%;left:52%">
+              <button class="map-point" style="top:63%;left:52%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Illegal Poaching</h2>
@@ -344,7 +345,7 @@
               </button>
 
 
-              <button class="map-point" style="top:35%;left:63%">
+              <button class="map-point" style="top:38%;left:63%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Nuclear Waste</h2>
@@ -354,7 +355,7 @@
               </button>
 
 
-              <button class="map-point" style="top:57%;left:69%">
+              <button class="map-point" style="top:60%;left:68.5%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Overpopulation</h2>
@@ -364,7 +365,7 @@
               </button>
 
 
-              <button class="map-point" style="top:53%;left:76%">
+              <button class="map-point" style="top:56%;left:75%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Air Pollution</h2>
@@ -374,7 +375,7 @@
               </button>
 
 
-              <button class="map-point" style="top:49%;left:86%">
+              <button class="map-point" style="top:52%;left:84.5%">
                   <div class="content">
                       <div class="centered-y">
                           <h2>Overfishing</h2>
@@ -384,7 +385,7 @@
           </button>
 
 
-          <button class="map-point" style="top:49%;left:86%">
+          <button class="map-point" style="top:52%;left:84.5%">
               <div class="content">
                   <div class="centered-y">
                       <h2>Overfishing</h2>
@@ -538,8 +539,9 @@
                 <div class="container">
                   <h3> Valentina</h3>
                   <p> <b>Sage Hill Class of 2020</b></p>
+                  <p>Stuff about me.</p>
                   <p>vlin2718@gmail.com</p>
-                  <a href="https://www.linkedin.com/in/valentina-l-b9187515b/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43477726-c996f03e-94b0-11e8-9bb6-3c0b9c64da07.png" style = "width:50%";> </a>
+                  <a href="https://www.linkedin.com/in/valentina-l-b9187515b/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43425896-c6602bae-9408-11e8-9f87-bd3592e9b73e.png" style = "width:50%";> </a>
                 </div>
               </div>
             </div>
@@ -550,8 +552,9 @@
                 <div class="container">
                   <h3>Kali</h3>
                   <p><b>Cerritos High School Class of 2020</b></p>
+                  <p>Stuff about me.</p>
                   <p>email@gmail.com</p>
-                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43477726-c996f03e-94b0-11e8-9bb6-3c0b9c64da07.png" style = "width:50%";> </a> -->
+                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
                 </div>
               </div>
             </div>
@@ -562,8 +565,9 @@
                 <div class="container">
                   <h3>Joselle</h3>
                   <p><b>Bishop Montgomery Class of 2019</b></p>
+                  <p>Stuff about me.</p>
                   <p>email@gmail.com</p>
-                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43477726-c996f03e-94b0-11e8-9bb6-3c0b9c64da07.png" style = "width:50%";> </a> -->
+                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
                 </div>
               </div>
             </div>
@@ -574,8 +578,9 @@
                 <div class="container">
                   <h2>Emily</h2>
                   <p><b>Chico High School Class of 2019</b></p>
+                  <p>Stuff about me.</p>
                   <p>emilyjanehull@yahoo.com</p>
-                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43477726-c996f03e-94b0-11e8-9bb6-3c0b9c64da07.png" style = "width:50%";> </a> -->
+                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
                 </div>
               </div>
             </div>
