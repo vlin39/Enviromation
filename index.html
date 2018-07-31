@@ -1,4 +1,6 @@
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <style>
       body {
           max-width: 1200px;
@@ -10,7 +12,7 @@
           text-align: center;
           font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif
           margin: 0;
-          /*font-family: Arial, Helvetica, sans-serif;*/
+          font-family: Arial, Helvetica, sans-serif;
         }
       .description {
           max-width: 600px;
@@ -21,25 +23,18 @@
           position: relative;
           box-sizing: border-box;
         }
-      h1, h2, h3 {
+      h1, h2, h3, h4, h5, h6 {
           margin-bottom: 20px;
           /*text-transform: uppercase;*/
           font-family: Impact, "Roboto Condensed", Helvetica, sans-serif;
           font-weight: 300;
         }
-      h4, h5, h6 {
-          margin-bottom: 20px;
-          /*text-transform: uppercase;*/
-          font-family: Impact, "Roboto Condensed", Helvetica, sans-serif;
-          font-weight: 300;
-        }
-      h1 {font-size: 52pt;}
+      h1 {font-size: 48pt;}
       h2 {font-size: 24pt;}
       h3 {font-size: 18pt;}
       h4 {font-size: 16pt;}
       h5 {font-size: 14pt;}
       h6 {font-size: 12pt;}
-      
       p {
         font-size: 12pt;
         margin-bottom: 12pt;
@@ -117,7 +112,7 @@
         transform: translateX(-50%);
         overflow: overlay;
       }
-      .distribution-map .map-point:active, .distribution-map .map-point:focus {
+      .distribution-map   , .distribution-map    {
         margin: 0;
         padding: 0;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -128,7 +123,7 @@
         z-index: 1;
         transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
       }
-      .distribution-map .map-point:active .content, .distribution-map .map-point:focus .content {
+      .distribution-map    .content, .distribution-map    .content {
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1;
         -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
@@ -138,7 +133,7 @@
         transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
         overflow: hidden;
       }
-      .distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
+      .distribution-map    .content a:hover, .distribution-map    .content a:active, .distribution-map    .content a:hover, .distribution-map    .content a:active {
         color: #afe1fa;
       }
           /* Popup container - can be anything you want */
@@ -161,6 +156,11 @@
           .topnav a.active {
             background-color: #4CAF50;
             color: white;
+          }
+          .map-point:hover{
+            width: 50px;
+            height:50px;
+            border-radius: 20px;
           }
           #help{display:none}
           #news{display:none}
@@ -188,6 +188,9 @@
 
 
 <body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
           <div class="topnav">
             <a class="tablinks" onclick="openCity(event, 'home')">HOME</a>
             <a class="tablinks" onclick="openCity(event, 'help')">GET INVOLVED</a>
@@ -195,8 +198,8 @@
             <a class="tablinks" onclick="openCity(event, 'about')">ABOUT</a>
           </div>
 
-      <!-- <script type = "text/javascript" src = "puppy.json" ></script>
-      <script>
+      <script type = "text/javascript" src = "puppy.json" ></script>
+      <!-- <script>
           var s = '{"Group":"emily, joselle, kali, valentina"}';
           var obj = JSON.parse(s);
           document.getElementById("puppy")=obj.Group;
@@ -206,15 +209,22 @@
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
           <p class="description"><strong>Click the points to expand them!</strong></p>
           <div class="distribution-map">
-              <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-              <button class="map-point" style="top:8%;left:48.5%">
-                  <div class="content">
-                      <div class="centered-y">
-                          <h2>Melting Ice Caps</h2>
-                          <p id="arctic"</p>
-                      </div>
-                  </div>
+          <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
+              <button type = "button" class="map-point"class="btn btn-primary"  data-toggle="modal" data-target="#icec" style="top:8%;left:48.5%">
               </button>
+                  <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                          <h2 class="modal-title">Melting Ice Caps</h2>
+                        </div>
+                    
+                        <div id = "arctic" class="modal-body"></div>
+                      </div>
+                    </div>
+                  </div>
+
+
               <button class="map-point" style="top:48%;left:49%">
                   <div class="content">
                       <div class="centered-y">
@@ -223,6 +233,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:79%;left:83%">
                   <div class="content">
                       <div class="centered-y">
@@ -231,6 +243,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:70%;left:12%">
                   <div class="content">
                       <div class="centered-y">
@@ -239,6 +253,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:50%;left:21%">
                   <div class="content">
                       <div class="centered-y">
@@ -247,6 +263,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:75%;left:32%">
                   <div class="content">
                       <div class="centered-y">
@@ -255,6 +273,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:57%;left:36%">
                   <div class="content">
                       <div class="centered-y">
@@ -263,6 +283,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:63%;left:52%">
                   <div class="content">
                       <div class="centered-y">
@@ -271,6 +293,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:38%;left:63%">
                   <div class="content">
                       <div class="centered-y">
@@ -279,6 +303,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:60%;left:68.5%">
                   <div class="content">
                       <div class="centered-y">
@@ -287,6 +313,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:56%;left:75%">
                   <div class="content">
                       <div class="centered-y">
@@ -295,6 +323,8 @@
                       </div>
                   </div>
               </button>
+
+
               <button class="map-point" style="top:52%;left:84.5%">
                   <div class="content">
                       <div class="centered-y">
@@ -303,19 +333,25 @@
                       </div>
               </div>
           </button>
+
+
           <button class="map-point" style="top:52%;left:84.5%">
               <div class="content">
                   <div class="centered-y">
                       <h2>Overfishing</h2>
                       <p id="puppy"></p>
                   </div>
+                </div>
+
               </button>
-            </div>
+
+
             <p> </p>
             <p class="description">Information provided by Wikipedia.</p>
             <p> </p>
             <p> </p>
         </div>
+
 
       <div id="help" class="tabcontent">
          <p>
@@ -424,92 +460,92 @@
 
 
     <script>
-    // This would be a function that asks for specific sections of an article
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
-    var whalingRequest = new XMLHttpRequest();
-    whalingRequest.open('GET', query, false);
-    whalingRequest.send();
-    var whalingInformation = JSON.parse(whalingRequest.responseText);
-    var body = whalingInformation['parse']['text']['*'];
-    document.getElementById("puppy").innerHTML = body;
-    // This would be a function that asks for summary of article
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Arctic+sea+ice+decline"
-    var arcticRequest = new XMLHttpRequest();
-    arcticRequest.open('GET', query, false);
-    arcticRequest.send();
-    var arcticInformation = JSON.parse(arcticRequest.responseText);
-    var body = arcticInformation['query']['pages']['40659364']['extract'];
-    document.getElementById("arctic").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Deforestation+in+Brazil"
-    var brazilRequest = new XMLHttpRequest();
-    brazilRequest.open('GET', query, false);
-    brazilRequest.send();
-    var brazilInformation = JSON.parse(brazilRequest.responseText);
-    var body = brazilInformation['query']['pages']['14434109']['extract'];
-    document.getElementById("brazil").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Desalination"
-    var desalRequest = new XMLHttpRequest();
-    desalRequest.open('GET', query, false);
-    desalRequest.send();
-    var desalInformation = JSON.parse(desalRequest.responseText);
-    var body = desalInformation['query']['pages']['156787']['extract'];
-    document.getElementById("desal").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Great+Pacific+garbage+patch"
-    var plasticRequest = new XMLHttpRequest();
-    plasticRequest.open('GET', query, false);
-    plasticRequest.send();
-    var plasticInformation = JSON.parse(plasticRequest.responseText);
-    var body = plasticInformation['query']['pages']['3554316']['extract'];
-    document.getElementById("plastic").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
-    var chinaRequest = new XMLHttpRequest();
-    chinaRequest.open('GET', query, false);
-    chinaRequest.send();
-    var chinaInformation = JSON.parse(chinaRequest.responseText);
-    var body = chinaInformation['parse']['text']['*'];
-    document.getElementById("china").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
-    var austRequest = new XMLHttpRequest();
-    austRequest.open('GET', query, false);
-    austRequest.send();
-    var austInformation = JSON.parse(austRequest.responseText);
-    var body = austInformation['query']['pages']['1107553']['extract'];
-    document.getElementById("aust").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Effects+of+the+Chernobyl+disaster&section=9"
-    var russiaRequest = new XMLHttpRequest();
-    russiaRequest.open('GET', query, false);
-    russiaRequest.send();
-    var russiaInformation = JSON.parse(russiaRequest.responseText);
-    var body = russiaInformation['parse']['text']['*'];
-    document.getElementById("russia").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
-    var usRequest = new XMLHttpRequest();
-    usRequest.open('GET', query, false);
-    usRequest.send();
-    var usInformation = JSON.parse(usRequest.responseText);
-    var body = usInformation['query']['pages']['16534351']['extract'];
-    document.getElementById("us").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&explaintext=&titles=Triangle+of+death+(Italy)"
-    var italyRequest = new XMLHttpRequest();
-    italyRequest.open('GET', query, false);
-    italyRequest.send();
-    var italyInformation = JSON.parse(italyRequest.responseText);
-    var body = italyInformation['query']['pages']['31535603']['extract'];
-    document.getElementById("italy").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Poaching&section=10"
-    var rainsRequest = new XMLHttpRequest();
-    rainsRequest.open('GET', query, false);
-    rainsRequest.send();
-    var rainsInformation = JSON.parse(rainsRequest.responseText);
-    var body = rainsInformation['parse']['text']['*'];
-    document.getElementById("rains").innerHTML = body;
-    var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
-    var popuRequest = new XMLHttpRequest();
-    popuRequest.open('GET', query, false);
-    popuRequest.send();
-    var popuInformation = JSON.parse(popuRequest.responseText);
-    var body = popuInformation['parse']['text']['*'];
-    document.getElementById("popu").innerHTML = body;
+          // This would be a function that asks for specific sections of an article
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+          var whalingRequest = new XMLHttpRequest();
+          whalingRequest.open('GET', query, false);
+          whalingRequest.send();
+          var whalingInformation = JSON.parse(whalingRequest.responseText);
+          var body = whalingInformation['parse']['text']['*'];
+          document.getElementById("puppy").innerHTML = body;
+          // This would be a function that asks for summary of article
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Arctic+sea+ice+decline"
+          var arcticRequest = new XMLHttpRequest();
+          arcticRequest.open('GET', query, false);
+          arcticRequest.send();
+          var arcticInformation = JSON.parse(arcticRequest.responseText);
+          var body = arcticInformation['query']['pages']['40659364']['extract'];
+          document.getElementById("arctic").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Deforestation+in+Brazil"
+          var brazilRequest = new XMLHttpRequest();
+          brazilRequest.open('GET', query, false);
+          brazilRequest.send();
+          var brazilInformation = JSON.parse(brazilRequest.responseText);
+          var body = brazilInformation['query']['pages']['14434109']['extract'];
+          document.getElementById("brazil").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Desalination"
+          var desalRequest = new XMLHttpRequest();
+          desalRequest.open('GET', query, false);
+          desalRequest.send();
+          var desalInformation = JSON.parse(desalRequest.responseText);
+          var body = desalInformation['query']['pages']['156787']['extract'];
+          document.getElementById("desal").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Great+Pacific+garbage+patch"
+          var plasticRequest = new XMLHttpRequest();
+          plasticRequest.open('GET', query, false);
+          plasticRequest.send();
+          var plasticInformation = JSON.parse(plasticRequest.responseText);
+          var body = plasticInformation['query']['pages']['3554316']['extract'];
+          document.getElementById("plastic").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
+          var chinaRequest = new XMLHttpRequest();
+          chinaRequest.open('GET', query, false);
+          chinaRequest.send();
+          var chinaInformation = JSON.parse(chinaRequest.responseText);
+          var body = chinaInformation['parse']['text']['*'];
+          document.getElementById("china").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
+          var austRequest = new XMLHttpRequest();
+          austRequest.open('GET', query, false);
+          austRequest.send();
+          var austInformation = JSON.parse(austRequest.responseText);
+          var body = austInformation['query']['pages']['1107553']['extract'];
+          document.getElementById("aust").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Effects+of+the+Chernobyl+disaster&section=9"
+          var russiaRequest = new XMLHttpRequest();
+          russiaRequest.open('GET', query, false);
+          russiaRequest.send();
+          var russiaInformation = JSON.parse(russiaRequest.responseText);
+          var body = russiaInformation['parse']['text']['*'];
+          document.getElementById("russia").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
+          var usRequest = new XMLHttpRequest();
+          usRequest.open('GET', query, false);
+          usRequest.send();
+          var usInformation = JSON.parse(usRequest.responseText);
+          var body = usInformation['query']['pages']['16534351']['extract'];
+          document.getElementById("us").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&explaintext=&titles=Triangle+of+death+(Italy)"
+          var italyRequest = new XMLHttpRequest();
+          italyRequest.open('GET', query, false);
+          italyRequest.send();
+          var italyInformation = JSON.parse(italyRequest.responseText);
+          var body = italyInformation['query']['pages']['31535603']['extract'];
+          document.getElementById("italy").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Poaching&section=10"
+          var rainsRequest = new XMLHttpRequest();
+          rainsRequest.open('GET', query, false);
+          rainsRequest.send();
+          var rainsInformation = JSON.parse(rainsRequest.responseText);
+          var body = rainsInformation['parse']['text']['*'];
+          document.getElementById("rains").innerHTML = body;
+          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
+          var popuRequest = new XMLHttpRequest();
+          popuRequest.open('GET', query, false);
+          popuRequest.send();
+          var popuInformation = JSON.parse(popuRequest.responseText);
+          var body = popuInformation['parse']['text']['*'];
+          document.getElementById("popu").innerHTML = body;
     </script>
 
 </body>
