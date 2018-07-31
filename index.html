@@ -425,7 +425,7 @@
 
 
               <!-- Overfishing -->
-              <button type="button" class="map-point" data-toggle="modal" data-target="overf" style="top:49%;left:86%">
+              <button type="button" class="map-point" data-toggle="modal" data-target="#overf" style="top:49%;left:86%">
               </button>
               <!-- Modal -->
               <div class="modal fade" id="overf" tabindex="-1" role="dialog" aria-labelledby="Overfishing" aria-hidden="true">
@@ -673,6 +673,7 @@
         var arcticInformation = JSON.parse(arcticRequest.responseText);
         var body = arcticInformation['query']['pages']['40659364']['extract'];
         document.getElementById("arctic").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Deforestation+in+Brazil"
         var brazilRequest = new XMLHttpRequest();
         brazilRequest.open('GET', query, false);
@@ -680,6 +681,7 @@
         var brazilInformation = JSON.parse(brazilRequest.responseText);
         var body = brazilInformation['query']['pages']['14434109']['extract'];
         document.getElementById("brazil").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Desalination"
         var desalRequest = new XMLHttpRequest();
         desalRequest.open('GET', query, false);
@@ -687,6 +689,7 @@
         var desalInformation = JSON.parse(desalRequest.responseText);
         var body = desalInformation['query']['pages']['156787']['extract'];
         document.getElementById("desal").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Great+Pacific+garbage+patch"
         var plasticRequest = new XMLHttpRequest();
         plasticRequest.open('GET', query, false);
@@ -694,6 +697,7 @@
         var plasticInformation = JSON.parse(plasticRequest.responseText);
         var body = plasticInformation['query']['pages']['3554316']['extract'];
         document.getElementById("plastic").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
         var chinaRequest = new XMLHttpRequest();
         chinaRequest.open('GET', query, false);
@@ -701,6 +705,7 @@
         var chinaInformation = JSON.parse(chinaRequest.responseText);
         var body = chinaInformation['parse']['text']['*'];
         document.getElementById("china").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
         var austRequest = new XMLHttpRequest();
         austRequest.open('GET', query, false);
@@ -708,6 +713,7 @@
         var austInformation = JSON.parse(austRequest.responseText);
         var body = austInformation['query']['pages']['1107553']['extract'];
         document.getElementById("aust").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Effects+of+the+Chernobyl+disaster&section=9"
         var russiaRequest = new XMLHttpRequest();
         russiaRequest.open('GET', query, false);
@@ -715,6 +721,7 @@
         var russiaInformation = JSON.parse(russiaRequest.responseText);
         var body = russiaInformation['parse']['text']['*'];
         document.getElementById("russia").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
         var usRequest = new XMLHttpRequest();
         usRequest.open('GET', query, false);
@@ -722,13 +729,15 @@
         var usInformation = JSON.parse(usRequest.responseText);
         var body = usInformation['query']['pages']['16534351']['extract'];
         document.getElementById("us").innerHTML = body;
-        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&explaintext=&titles=Triangle+of+death+(Italy)"
+
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Triangle+of+death+(Italy)"
         var italyRequest = new XMLHttpRequest();
         italyRequest.open('GET', query, false);
         italyRequest.send();
         var italyInformation = JSON.parse(italyRequest.responseText);
         var body = italyInformation['query']['pages']['31535603']['extract'];
         document.getElementById("italy").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Poaching&section=10"
         var rainsRequest = new XMLHttpRequest();
         rainsRequest.open('GET', query, false);
@@ -736,6 +745,7 @@
         var rainsInformation = JSON.parse(rainsRequest.responseText);
         var body = rainsInformation['parse']['text']['*'];
         document.getElementById("rains").innerHTML = body;
+
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
         var popuRequest = new XMLHttpRequest();
         popuRequest.open('GET', query, false);
