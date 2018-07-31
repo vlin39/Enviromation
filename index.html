@@ -657,6 +657,13 @@
 
 
     <script>
+        function strip(html)
+        {
+        var tmp = document.createElement("DIV");
+        tmp.innerHTML = html;
+        return tmp.textContent||tmp.innerText;
+        }
+
         // This would be a function that asks for specific sections of an article
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
         var whalingRequest = new XMLHttpRequest();
@@ -698,12 +705,13 @@
         var body = plasticInformation['query']['pages']['3554316']['extract'];
         document.getElementById("plastic").innerHTML = body;
 
-        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution+in+China&section=7"
         var chinaRequest = new XMLHttpRequest();
         chinaRequest.open('GET', query, false);
         chinaRequest.send();
         var chinaInformation = JSON.parse(chinaRequest.responseText);
         var body = chinaInformation['parse']['text']['*'];
+        body = String(strip(body)).split("urban and industrial pollution.")[1];
         document.getElementById("china").innerHTML = body;
 
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
@@ -719,7 +727,7 @@
         russiaRequest.open('GET', query, false);
         russiaRequest.send();
         var russiaInformation = JSON.parse(russiaRequest.responseText);
-        var body = russiaInformation['parse']['text']['*'];
+        var body = strip(russiaInformation['parse']['text']['*']);
         document.getElementById("russia").innerHTML = body;
 
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
@@ -744,7 +752,7 @@
         rainsRequest.send();
         var rainsInformation = JSON.parse(rainsRequest.responseText);
         var body = rainsInformation['parse']['text']['*'];
-        document.getElementById("rains").innerHTML = body;
+        document.getElementById("rains").innerHTML = strip(body);
 
         var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
         var popuRequest = new XMLHttpRequest();
@@ -752,7 +760,7 @@
         popuRequest.send();
         var popuInformation = JSON.parse(popuRequest.responseText);
         var body = popuInformation['parse']['text']['*'];
-        document.getElementById("popu").innerHTML = body;
+        document.getElementById("popu").innerHTML = strip(body);
     </script>
 
 </body>
