@@ -1,6 +1,5 @@
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
       body {
           max-width: 1200px;
@@ -117,8 +116,8 @@
         padding: 0;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1;
-        width: 300px;
-        height: 220px;
+        /* width: 300px;
+        height: 220px; */
         color: #e5e5e5;
         z-index: 1;
         transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
@@ -165,6 +164,68 @@
           #help{display:none}
           #news{display:none}
           #about{display:none}
+          #aboutt{
+          }
+
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+            html {
+              box-sizing: border-box;
+            }
+
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
+
+            .column {
+              float: left;
+              width: 25%;
+              margin-bottom: 16px;
+              padding: 0 8px;
+            }
+
+            @media screen and (max-width: 650px) {
+              .column {
+                width: 100%;
+                display: block;
+              }
+            }
+
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .container {
+              padding: 0 16px;
+            }
+
+            .container::after, .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+            .title {
+              color: grey;
+            }
+
+            .button {
+              border: none;
+              outline: 0;
+              display: inline-block;
+              padding: 8px;
+              color: white;
+              background-color: #000;
+              text-align: center;
+              cursor: pointer;
+              width: 100%;
+            }
+
+            .map-point:hover {
+              background-color: #555;
+              width: 50px;
+              height: 50px;
+              border-radius: 20px;
+            }
   </style>
 
   <script>
@@ -188,9 +249,9 @@
 
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
           <div class="topnav">
             <a class="tablinks" onclick="openCity(event, 'home')">HOME</a>
             <a class="tablinks" onclick="openCity(event, 'help')">GET INVOLVED</a>
@@ -209,20 +270,23 @@
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
           <p class="description"><strong>Click the points to expand them!</strong></p>
           <div class="distribution-map">
-          <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
-              <button type = "button" class="map-point"class="btn btn-primary"  data-toggle="modal" data-target="#icec" style="top:8%;left:48.5%">
+              <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
+
+
+              <button class="map-point" data-toggle="modal" data-target="#icec" style="top:8%;left:48.5%">
               </button>
-                  <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
+
+                <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-labelledby="Melting Ice Caps" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class = "modal-header">
                           <h2 class="modal-title">Melting Ice Caps</h2>
-                        </div>
-                    
-                        <div id = "arctic" class="modal-body"></div>
+                          <div class="modal-body" id="arctic"></div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
 
               <button class="map-point" style="top:48%;left:49%">
@@ -355,7 +419,7 @@
 
       <div id="help" class="tabcontent">
          <p>
-          <p> <h3> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues!</h3>
+          <p> If you want to help, learn more about these topics and/or donate to non-profit organizations dedicated to countering these issues!</p>
             <h2> Melting Ice Caps </h2>
               <a href="https://engage.us.greenpeace.org/onlineactions/0Dz8eFnSfEGAkQBffzy_1A2?&utm_source=website&utm_medium=homepage&utm_campaign=website_donation_form_(header)&r=true&am=15&_ga=2.51961198.639455690.1532721417-417611429.1532721417" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43347998-b9dc74f4-91ac-11e8-8b59-fbad1cf2c67d.png" style = "width:50%"; > </a>
               <br>
@@ -375,8 +439,10 @@
               <br>
               <a href="https://www.take3.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348296-4490a59c-91ae-11e8-8c81-70e92825fe3c.png" style = "width:25%"; > </a>
               <br>
+              <br>
             <h2> Agricultural Pollution </h2>
               <a href="https://actionnetwork.org/fundraising/help-us-create-a-just-thriving-food-system?_ga=2.102796096.1983470314.1532721219-1439825251.1532721219" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348090-303d005a-91ad-11e8-80d6-54419ef8bbc0.png" style = "width:30%"; > </a>
+              <br>
               <br>
             <h2> Deforestation </h2>
               <a href="http://www.worldrainforest.org/donate.html" target="_blank"> World Rainforest Fund </a>
@@ -398,11 +464,11 @@
             <h2> Illegal Poaching </h2>
               <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348428-cf3a120a-91ae-11e8-8422-fd4349f5b151.png" style = "width:30%"; > </a>
               <br>
-              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348454-f795483c-91ae-11e8-8153-94a602c2daa2.png" style = "width:60%"; > </a>
+              <a href="https://www.iapf.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411939-81e5f6e8-93e0-11e8-9e5d-48baf9bf88cd.png" style = "width:60%"; > </a>
               <br>
-              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348519-43b78ed2-91af-11e8-98dd-4ad490f8130f.png"style = "width:30%"; > </a>
+              <a href="https://secure.ifaw.org/united-states/secure/help-us-save-animals-and-places-they-call-home" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411940-820967a4-93e0-11e8-9a57-39939eb52c8a.png"style = "width:30%"; > </a>
               <br>
-              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348523-4ae35b82-91af-11e8-9f6a-5741823db356.png" style = "width:30%"; > </a>
+              <a href="https://www.wcs.org/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43411941-8230184a-93e0-11e8-91b9-c4d9fdada26a.png" style = "width:30%"; > </a>
               <br>
               <a href="http://chengetawildlife.org/donate-to-chengeta-wildlife/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348487-15662e76-91af-11e8-9b8d-8eeef2f3ee06.png" style = "width:30%"; > </a>
               <br>
@@ -411,8 +477,8 @@
               <br>
             <h2> Nuclear Waste </h2>
               <a href="http://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-wastes/radioactive-wastes-myths-and-realities.aspx" target="_blank"> World Nuclear Association: Radioactive Waste - Myths and Realities</a>
-            <h2> Overpopulation </h2>
               <br>
+            <h2> Overpopulation </h2>
               <a href="https://yaleglobal.yale.edu/content/world-population-trends-signal-dangers-ahead" target="_blank"> Yale: World Population Trends Signal Dangers Ahead </a>
               <br>
               <a href="https://mahb.stanford.edu/library-item/the-effect-of-overpopulation-on-public-health/" target="_blank"> Stanford: The Effect of Overpopulation on Public Health </a>
@@ -425,6 +491,7 @@
               <br>
               <a href="http://www.greenpeace.org/eastasia/campaigns/air-pollution/" target="_blank"> Greenpeace: What We Do - Reduce Air Pollution </a>
               <br>
+              <br>
             <h2> Overfishing </h2>
               <img src="https://user-images.githubusercontent.com/40871976/43348248-f86a7a8a-91ad-11e8-91d8-98190e982200.png" style = "width:40%"; >
               <br>
@@ -436,22 +503,77 @@
             <h2> Invasive species </h2>
               <a href="https://www.rrisc.org/donate/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43348266-15d04e92-91ae-11e8-8289-56e0375eca31.png" style = "width:25%";> </a>
               <br>
+              <br>
         </p>
       </div>
 
       <div id="news" class="tabcontent">
-        <p>News From Gef Twitter</p>
+        <p>News From Global Environment Facility Twitter:</p>
         <a class="twitter-timeline" href="https://twitter.com/theGEF?ref_src=twsrc%5Etfw">Tweets by GEF</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
-      <div id="about" class="tabcontent">
+      <div id="about" class="tabcontent"
         <div>
-            <h1>About This Website</h1>
-        </div>
-        <div>
-          <h1>About The Creators</h2>
+          <h2> About the Website </h2>
+
+          <h2>Meet the Creators</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <!-- <img src="PHOTOLINK" alt="Valentina" style="width:100%"> -->
+                <div class="container">
+                  <h2>Valentina</h2>
+                  <p><b>Sage Hill Class of 2020</b></p>
+                  <p>Stuff about me.</p>
+                  <p>vlin2718@gmail.com</p>
+                  <a href="https://www.linkedin.com/in/valentina-l-b9187515b/" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43425896-c6602bae-9408-11e8-9f87-bd3592e9b73e.png" style = "width:50%";> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <!-- <img src="PHOTOLINK" alt="Kali" style="width:100%"> -->
+                  <div class="container">
+                    <h2>Kali</h2>
+                    <p><b>Cerritos High School Class of 2020</b></p>
+                    <p>Stuff about me.</p>
+                    <p>email@gmail.com</p>
+                    <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
+                  </div>
+                </div>
+              </div>
+
+            <div class="column">
+              <div class="card">
+              <!--  <img src="PHOTOLINK" alt="Joselle" style="width:100%"> -->
+                <div class="container">
+                  <h2>Joselle</h2>
+                  <p><b>Bishop Montgomery Class of 2019</b></p>
+                  <p>Stuff about me.</p>
+                  <p>email@gmail.com</p>
+                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <!-- <img src="PHOTOLINK" alt="Emily" style="width:100%"> -->
+                <div class="container">
+                  <h2>Emily</h2>
+                  <p><b>Chico High School Class of 2019</b></p>
+                  <p>Stuff about me.</p>
+                  <p>emilyjanehull@yahoo.com</p>
+                  <!-- <a href="LINK" target="_blank"> <img src="https://user-images.githubusercontent.com/40871976/43419515-ec2e02ce-93f5-11e8-8bfd-3a7ce442363b.png" style = "width:25%";> </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
+      </div>
       </div>
 
       <br/>
@@ -460,92 +582,92 @@
 
 
     <script>
-          // This would be a function that asks for specific sections of an article
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
-          var whalingRequest = new XMLHttpRequest();
-          whalingRequest.open('GET', query, false);
-          whalingRequest.send();
-          var whalingInformation = JSON.parse(whalingRequest.responseText);
-          var body = whalingInformation['parse']['text']['*'];
-          document.getElementById("puppy").innerHTML = body;
-          // This would be a function that asks for summary of article
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Arctic+sea+ice+decline"
-          var arcticRequest = new XMLHttpRequest();
-          arcticRequest.open('GET', query, false);
-          arcticRequest.send();
-          var arcticInformation = JSON.parse(arcticRequest.responseText);
-          var body = arcticInformation['query']['pages']['40659364']['extract'];
-          document.getElementById("arctic").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Deforestation+in+Brazil"
-          var brazilRequest = new XMLHttpRequest();
-          brazilRequest.open('GET', query, false);
-          brazilRequest.send();
-          var brazilInformation = JSON.parse(brazilRequest.responseText);
-          var body = brazilInformation['query']['pages']['14434109']['extract'];
-          document.getElementById("brazil").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Desalination"
-          var desalRequest = new XMLHttpRequest();
-          desalRequest.open('GET', query, false);
-          desalRequest.send();
-          var desalInformation = JSON.parse(desalRequest.responseText);
-          var body = desalInformation['query']['pages']['156787']['extract'];
-          document.getElementById("desal").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Great+Pacific+garbage+patch"
-          var plasticRequest = new XMLHttpRequest();
-          plasticRequest.open('GET', query, false);
-          plasticRequest.send();
-          var plasticInformation = JSON.parse(plasticRequest.responseText);
-          var body = plasticInformation['query']['pages']['3554316']['extract'];
-          document.getElementById("plastic").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
-          var chinaRequest = new XMLHttpRequest();
-          chinaRequest.open('GET', query, false);
-          chinaRequest.send();
-          var chinaInformation = JSON.parse(chinaRequest.responseText);
-          var body = chinaInformation['parse']['text']['*'];
-          document.getElementById("china").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
-          var austRequest = new XMLHttpRequest();
-          austRequest.open('GET', query, false);
-          austRequest.send();
-          var austInformation = JSON.parse(austRequest.responseText);
-          var body = austInformation['query']['pages']['1107553']['extract'];
-          document.getElementById("aust").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Effects+of+the+Chernobyl+disaster&section=9"
-          var russiaRequest = new XMLHttpRequest();
-          russiaRequest.open('GET', query, false);
-          russiaRequest.send();
-          var russiaInformation = JSON.parse(russiaRequest.responseText);
-          var body = russiaInformation['parse']['text']['*'];
-          document.getElementById("russia").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
-          var usRequest = new XMLHttpRequest();
-          usRequest.open('GET', query, false);
-          usRequest.send();
-          var usInformation = JSON.parse(usRequest.responseText);
-          var body = usInformation['query']['pages']['16534351']['extract'];
-          document.getElementById("us").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&explaintext=&titles=Triangle+of+death+(Italy)"
-          var italyRequest = new XMLHttpRequest();
-          italyRequest.open('GET', query, false);
-          italyRequest.send();
-          var italyInformation = JSON.parse(italyRequest.responseText);
-          var body = italyInformation['query']['pages']['31535603']['extract'];
-          document.getElementById("italy").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Poaching&section=10"
-          var rainsRequest = new XMLHttpRequest();
-          rainsRequest.open('GET', query, false);
-          rainsRequest.send();
-          var rainsInformation = JSON.parse(rainsRequest.responseText);
-          var body = rainsInformation['parse']['text']['*'];
-          document.getElementById("rains").innerHTML = body;
-          var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
-          var popuRequest = new XMLHttpRequest();
-          popuRequest.open('GET', query, false);
-          popuRequest.send();
-          var popuInformation = JSON.parse(popuRequest.responseText);
-          var body = popuInformation['parse']['text']['*'];
-          document.getElementById("popu").innerHTML = body;
+        // This would be a function that asks for specific sections of an article
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Environmental%20issues%20in%20Japan&section=7"
+        var whalingRequest = new XMLHttpRequest();
+        whalingRequest.open('GET', query, false);
+        whalingRequest.send();
+        var whalingInformation = JSON.parse(whalingRequest.responseText);
+        var body = whalingInformation['parse']['text']['*'];
+        document.getElementById("puppy").innerHTML = body;
+        // This would be a function that asks for summary of article
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Arctic+sea+ice+decline"
+        var arcticRequest = new XMLHttpRequest();
+        arcticRequest.open('GET', query, false);
+        arcticRequest.send();
+        var arcticInformation = JSON.parse(arcticRequest.responseText);
+        var body = arcticInformation['query']['pages']['40659364']['extract'];
+        document.getElementById("arctic").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Deforestation+in+Brazil"
+        var brazilRequest = new XMLHttpRequest();
+        brazilRequest.open('GET', query, false);
+        brazilRequest.send();
+        var brazilInformation = JSON.parse(brazilRequest.responseText);
+        var body = brazilInformation['query']['pages']['14434109']['extract'];
+        document.getElementById("brazil").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Desalination"
+        var desalRequest = new XMLHttpRequest();
+        desalRequest.open('GET', query, false);
+        desalRequest.send();
+        var desalInformation = JSON.parse(desalRequest.responseText);
+        var body = desalInformation['query']['pages']['156787']['extract'];
+        document.getElementById("desal").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Great+Pacific+garbage+patch"
+        var plasticRequest = new XMLHttpRequest();
+        plasticRequest.open('GET', query, false);
+        plasticRequest.send();
+        var plasticInformation = JSON.parse(plasticRequest.responseText);
+        var body = plasticInformation['query']['pages']['3554316']['extract'];
+        document.getElementById("plastic").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Pollution in China&section=7"
+        var chinaRequest = new XMLHttpRequest();
+        chinaRequest.open('GET', query, false);
+        chinaRequest.send();
+        var chinaInformation = JSON.parse(chinaRequest.responseText);
+        var body = chinaInformation['parse']['text']['*'];
+        document.getElementById("china").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Invasive+species+in+Australia"
+        var austRequest = new XMLHttpRequest();
+        austRequest.open('GET', query, false);
+        austRequest.send();
+        var austInformation = JSON.parse(austRequest.responseText);
+        var body = austInformation['query']['pages']['1107553']['extract'];
+        document.getElementById("aust").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Effects+of+the+Chernobyl+disaster&section=9"
+        var russiaRequest = new XMLHttpRequest();
+        russiaRequest.open('GET', query, false);
+        russiaRequest.send();
+        var russiaInformation = JSON.parse(russiaRequest.responseText);
+        var body = russiaInformation['parse']['text']['*'];
+        document.getElementById("russia").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro=&explaintext=&titles=Environmental+impact+of+pesticides"
+        var usRequest = new XMLHttpRequest();
+        usRequest.open('GET', query, false);
+        usRequest.send();
+        var usInformation = JSON.parse(usRequest.responseText);
+        var body = usInformation['query']['pages']['16534351']['extract'];
+        document.getElementById("us").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&explaintext=&titles=Triangle+of+death+(Italy)"
+        var italyRequest = new XMLHttpRequest();
+        italyRequest.open('GET', query, false);
+        italyRequest.send();
+        var italyInformation = JSON.parse(italyRequest.responseText);
+        var body = italyInformation['query']['pages']['31535603']['extract'];
+        document.getElementById("italy").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Poaching&section=10"
+        var rainsRequest = new XMLHttpRequest();
+        rainsRequest.open('GET', query, false);
+        rainsRequest.send();
+        var rainsInformation = JSON.parse(rainsRequest.responseText);
+        var body = rainsInformation['parse']['text']['*'];
+        document.getElementById("rains").innerHTML = body;
+        var query = "https://en.wikipedia.org/w/api.php?format=json&action=parse&prop=text&origin=*&page=Human+overpopulation&section=23"
+        var popuRequest = new XMLHttpRequest();
+        popuRequest.open('GET', query, false);
+        popuRequest.send();
+        var popuInformation = JSON.parse(popuRequest.responseText);
+        var body = popuInformation['parse']['text']['*'];
+        document.getElementById("popu").innerHTML = body;
     </script>
 
 </body>
