@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -15,11 +15,7 @@
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
         }
-      .description {
-          max-width: 600px;
-          margin: 0 auto;
-          color: rgba(229, 229, 229, 0.7);
-        }
+
       div, img, footer {
           position: relative;
           box-sizing: border-box;
@@ -113,18 +109,8 @@
         transform: translateX(-50%);
         overflow: overlay;
       }
-      .distribution-map   , .distribution-map    {
-        margin: 0;
-        padding: 0;
-        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-        opacity: 1;
-        /* width: 300px;
-        height: 220px; */
-        color: #e5e5e5;
-        z-index: 1;
-        transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-      }
-      .distribution-map    .content, .distribution-map    .content {
+
+      .distribution-map  .content {
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1;
         -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
@@ -162,15 +148,14 @@
             width: 50px;
             height:50px;
             border-radius: 20px;
+            color: black;
           }
           #help{display:none}
           #news{display:none}
           #about{display:none}
           #aboutt{
           }
-            html {
-              box-sizing: border-box;
-            }
+
             *, *:before, *:after {
               box-sizing: inherit;
             }
@@ -212,12 +197,16 @@
               cursor: pointer;
               width: 100%;
             }
-            .map-point:hover {
-              background-color: #555;
-              width: 50px;
-              height: 50px;
-              border-radius: 20px;
-            }
+            .modal-header {
+                background-color: darkblue;
+                color: white;
+                          }
+
+            /* .modal{
+              color: white;
+              background-color: black;
+            } */
+
   </style>
 
   <script>
@@ -241,10 +230,9 @@
 
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <div class="topnav">
             <a class="tablinks" onclick="openCity(event, 'home')">HOME</a>
             <a class="tablinks" onclick="openCity(event, 'help')">GET INVOLVED</a>
@@ -259,19 +247,19 @@
           document.getElementById("puppy")=obj.Group;
       </script> -->
 
+
       <div id="home" class="tabcontent">
-          <br>
           <h1> <center> <font face = "impact, bookman, helvetica" color = #90E16D  font-size = 500 px> E  N  V  I  R  O  M  A  T  I  O  N </font> </center> </h1>
-          <p class="description"><strong>Click the points to expand them!<strong></p>
+          <p class="description"><strong>Click the points to expand them!</strong></p>
             <br>
             <br>
 
           <div class="distribution-map">
               <img src="https://user-images.githubusercontent.com/40871976/43337225-0a6d3e00-9188-11e8-83e0-aaa1a8b074a4.png">
 
-              <button class="map-point" data-toggle="modal" data-target="#icec" style="top:8%;left:48.5%">
-              </button>
-              <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-labelledby="Melting Ice Caps" aria-hidden="true">
+
+              <button class="map-point" role = "button" class = "btn btn-default" data-toggle="modal" data-target="#icec" style="top:8%;left:48.5%"></button>
+              <div class="modal fade" id="icec" tabindex="-1" role="dialog" aria-hidden = "true" data-keyboard="true"  data-backdrop="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -281,12 +269,9 @@
                     <div class="modal-body" id="arctic">
 
                     </div>
-                    <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
                   </div>
                 </div>
-              <!--</div>-->
+              </div>
 
 
               <button class="map-point" style="top:48%;left:49%">
@@ -417,7 +402,6 @@
         </div>
       </div>
 
-      </div>
 
       <div id="help" class="tabcontent">
          <p>
@@ -601,7 +585,7 @@
 
         </div>
       </div>
-      </div>
+
 
       <br>
       <br>
